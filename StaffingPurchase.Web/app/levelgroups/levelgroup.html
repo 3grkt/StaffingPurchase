@@ -1,0 +1,68 @@
+﻿<fieldset class="fieldset">
+	<uib-alert type="{{vm.alertAddLevelGroup.type}}" ng-show="vm.alertAddLevelGroup.show" close="vm.alertAddLevelGroup.close()">{{vm.alertAddLevelGroup.mgs | translate}}</uib-alert>
+	<form class="form-horizontal" role="form">
+		<div class="from-group row">
+				<div class="col-md-6">
+					<div class="row">
+						<label class="col-md-3" translate>LevelGroup.Name</label>
+						<div class="col-md-9">
+							<input type="text" class="form-control" ng-model="vm.levelGroup.Name" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2" />
+				<div class="col-md-4">
+					<div class="row">
+						<label class="col-md-3" translate>LevelGroup.PV</label>
+						<div class="col-md-9">
+							<input type="number" min="0" max="1000" class="form-control" ng-model="vm.levelGroup.PV" />
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-md-12 text-right">
+
+							<button type="button" class="btn btn-primary" ng-click="vm.addLevelGroup()">
+								<i class="fa fa-plus"></i> {{ "LevelGroup.Create" | translate }}
+							</button>
+						</div>
+					</div>
+				</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset">
+	<uib-alert type="{{vm.alertLevelGroup.type}}" ng-show="vm.alertLevelGroup.show" close="vm.alertLevelGroup.close()">{{vm.alertLevelGroup.mgs | translate}}</uib-alert>
+	<uib-alert type="{{vm.alertGridLevelGroup.type}}" ng-show="vm.alertGridLevelGroup.show" close="vm.alertGridLevelGroup.close()">{{vm.alertGridLevelGroup.mgs | translate}}</uib-alert>
+	<div class="row">
+		<div class="col-md-6">
+			<div></div>
+			<div ui-grid="vm.gridOptionsLevelGroup" class="grid grid-customized"></div>
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<button type="button" class="btn btn-primary" ng-click="vm.cancelUpdateLevelGroups()">
+						<i class="fa fa-ban"></i> {{ "LevelGroup.Cancel" | translate }}
+					</button>
+					<button type="button" value="openModal" class="btn btn-primary" ng-click="vm.saveUpdateLevelGroups()">
+						<i class="fa fa-floppy-o"></i> {{ "LevelGroup.Save" | translate }}
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div ui-grid="vm.gridOptionsLevel" ui-grid-edit ng-if="vm.levelGroups.length > 0" class="grid grid-customized"></div>
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<button type="button" class="btn btn-primary" ng-click="vm.cancelUpdateLevels()">
+						<i class="fa fa-ban "></i> {{ "LevelGroup.Cancel" | translate }}
+					</button>
+					<button type="button" value="openModal" class="btn btn-primary" ng-click="vm.saveUpdateLevels()">
+						<i class="fa fa-floppy-o"></i> {{ "LevelGroup.Save" | translate }}
+					</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</fieldset>
+

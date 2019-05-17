@@ -1,0 +1,9 @@
+// VSCode user settings.
+{
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/obj": true,
+        "**/bin": true
+    }
+}

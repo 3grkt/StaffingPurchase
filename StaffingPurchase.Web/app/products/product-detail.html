@@ -1,0 +1,79 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form" name="productForm">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.Id</label>
+				<div class="col-md-3">
+					<span>{{ vm.currentProduct.Id }}</span>
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.Sku</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" required ng-model="vm.currentProduct.Sku" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.Name</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" required ng-model="vm.currentProduct.Name" />
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.NameEn</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" ng-model="vm.currentProduct.NameEn" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.PV</label>
+				<div class="col-md-3">
+					<input type="number" step="any" class="form-control" ng-model="vm.currentProduct.PV" />
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.Price</label>
+				<div class="col-md-3">
+					<input type="number" class="form-control" ng-model="vm.currentProduct.Price" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.NetWeight</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" ng-model="vm.currentProduct.NetWeight" />
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.Category</label>
+				<div class="col-md-3">
+					<select class="form-control" convert-to-number required
+							ng-model="vm.currentProduct.CategoryId"
+							ng-options="key as value for (key, value) in vm.allCategories">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.IsActive</label>
+				<div class="col-md-3">
+					<input type="checkbox" ng-model="vm.currentProduct.IsActive" />
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Common.UpdatedDate</label>
+				<div class="col-md-3">
+					<span>{{ vm.currentProduct.ModifiedDate | customDateTime }}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<button type="button" class="btn btn-primary" ng-click="vm.close()">
+					<i class="fa fa-ban"></i> {{ "Common.Close" | translate }}
+				</button>
+				<button type="submit" value="search" class="btn btn-primary" ng-click="vm.save()" ng-disabled="!productForm.$valid">
+					<i class="fa fa-search"></i> {{ "Common.Save" | translate }}
+				</button>
+			</div>
+		</div>
+	</form>
+</fieldset>

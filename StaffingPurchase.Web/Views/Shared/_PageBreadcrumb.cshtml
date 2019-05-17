@@ -1,0 +1,23 @@
+﻿@using StaffingPurchase.Web.Models.Common
+@model PageBreadcrumb
+
+@*<div class="breadcrumb">*@
+<ol class="breadcrumb">
+	<li>
+		<a href="@Url.Action("Index", "Home")"><i class="glyphicon glyphicon-home"></i>&nbsp;@T("PageTitle.Home")</a>
+	</li>
+	@foreach (var item in Model.Breadcrumb)
+	{
+		<li>
+			@if (string.IsNullOrEmpty(item.Value))
+			{
+				<span title="@item.Key">@item.Key.Trim(30, true)</span>
+			}
+			else
+			{
+				<a href="@(item.Value ?? "#")" title="@item.Key">@item.Key.Trim(30, true)</a>
+			}
+		</li>
+	}
+</ol>
+@*</div>*@

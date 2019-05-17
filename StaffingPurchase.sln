@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Web", "StaffingPurchase.Web\StaffingPurchase.Web.csproj", "{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Core", "StaffingPurchase.Core\StaffingPurchase.Core.csproj", "{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Data", "StaffingPurchase.Data\StaffingPurchase.Data.csproj", "{7FB20E17-369F-4E91-8699-26B1CFABF838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Services", "StaffingPurchase.Services\StaffingPurchase.Services.csproj", "{74891A5D-A407-4AF9-A541-C58E9EFDB19C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{304AD43C-8DD9-4908-B914-A06B391818C7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Tests", "StaffingPurchase.Tests\StaffingPurchase.Tests.csproj", "{F8CC9DBA-D887-46FE-8348-864566E5792E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.Jobs", "StaffingPurchase.Jobs\StaffingPurchase.Jobs.csproj", "{A2313503-E5B8-4260-B809-51E1E7997B5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffingPurchase.JobExecutor", "StaffingPurchase.JobExecutor\StaffingPurchase.JobExecutor.csproj", "{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Azure|Any CPU = Azure|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97F0D8F-95FD-448B-AABA-9F2BB88DD0E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07576FFF-91D3-440D-99EB-A0AB3F1AD2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB20E17-369F-4E91-8699-26B1CFABF838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74891A5D-A407-4AF9-A541-C58E9EFDB19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CC9DBA-D887-46FE-8348-864566E5792E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Azure|Any CPU.ActiveCfg = Azure|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Azure|Any CPU.Build.0 = Azure|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2313503-E5B8-4260-B809-51E1E7997B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Azure|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Azure|Any CPU.Build.0 = Release|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3F0F6A-E0DE-49FA-9C84-40B8BA27A6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

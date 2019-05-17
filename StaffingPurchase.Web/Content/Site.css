@@ -1,0 +1,948 @@
+﻿/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+
+/* Wrapper for page content to push down footer */
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+
+/* Set the fixed height of the footer here */
+
+#footer {
+  height: 60px;
+  border-top: solid 1px #eee;
+  /*background-color: #f5f5f5;*/
+  /*margin-top: 20px;*/
+}
+
+
+/* Add padding, alignment for footer */
+
+#footer .text-muted {
+  text-align: center;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+#footer .text-muted .app-desc {
+  font-size: 0.9em;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+
+/* Not required for template or sticky footer method. */
+
+#wrap>.container {
+  padding: 60px 15px 0;
+}
+
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer>.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-default {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-brand {
+  padding: 7px 15px;
+  color: #00457c;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  /*background-color: #f2f2f2;*/
+}
+
+.nav {
+  /*background-color: #f8f8f8;*/
+}
+
+.nav a {
+  color: #2d75b2;
+}
+
+#side-menu {
+  background-color: #f8f8f8;
+}
+
+code {
+  font-size: 80%;
+}
+
+.top-buffer-10 {
+  margin-top: 10px;
+}
+
+.jumbotron-sm {
+  padding: 10px 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.fieldset {
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.fieldset legend {
+  padding: 0 10px;
+  width: inherit;
+  border-bottom: none;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 10px;
+  margin-bottom: 0;
+}
+
+.page-container {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+.down-space-10 {
+  margin-bottom: 10px;
+}
+
+.down-space-20 {
+  margin-bottom: 20px;
+}
+
+form .disabled {
+  color: #999;
+}
+
+.breadcrumb {
+  background-color: transparent !important;
+  margin-bottom: 0;
+  margin-top: 27px;
+  padding-right: 2px;
+  font-size: 0.9em;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+}
+
+.breadcrumb li {
+  font-weight: 400;
+  display: inline;
+}
+
+.breadcrumb>li+li:before {
+  padding: 0 2px !important;
+  color: #333;
+  content: "\f105";
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-header {
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.user-info {
+  margin-right: 0 !important;
+  color: #2d75b2;
+  width: 100%;
+}
+
+@media(min-width:768px) {
+  .user-info {
+    width: auto;
+  }
+}
+
+.site-map,
+.site-map ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.site-map>li>ul>li {
+  padding-left: 20px;
+}
+
+.site-map>li:before,
+.site-map>li>ul>li:before {
+  content: '|-----';
+  margin-right: 5px;
+}
+
+.panel-default>.panel-heading {
+  background-color: #428bca;
+  color: #fff;
+}
+
+.inventory-stat {
+  color: #2d75b2;
+}
+
+
+/* login
+----------------------------------------------------------*/
+
+#login {
+  display: block;
+  font-size: 1em;
+  text-align: right;
+  padding: 15px;
+}
+
+#login a {
+  background-color: #d3dce0;
+  margin-left: 10px;
+  margin-right: 3px;
+  padding: 2px 3px;
+  text-decoration: none;
+}
+
+#login a.username {
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+
+#login ul {
+  margin: 0;
+}
+
+#login li {
+  display: inline;
+  list-style: none;
+}
+
+#login form {
+  display: inline;
+}
+
+
+/* Grid
+----------------------------------------------------------*/
+
+.grid {
+  width: 100%;
+  border: solid 1px #ddd;
+  margin-bottom: 10px;
+}
+
+.grid thead tr {
+  background-color: #428bca;
+  color: #fefefe;
+}
+
+.grid thead tr a {
+  color: #fff;
+}
+
+.grid thead tr th {
+  padding: 5px;
+}
+
+.grid tbody tr td {
+  padding: 5px;
+}
+
+.grid .gridrow {}
+
+.grid .gridrow_alternate {
+  background-color: #F2F2F2;
+}
+
+.grid .sort_asc:before {
+  font-family: 'FontAwesome';
+  content: "\f0d8";
+  margin-right: 2px;
+  color: #fff;
+}
+
+.grid .sort_desc:before {
+  font-family: 'FontAwesome';
+  content: "\f0d7";
+  margin-right: 2px;
+  color: #fff;
+}
+
+.grid-pager {
+  margin: 5px 0;
+}
+
+.page-number,
+.page-change {
+  width: 40px;
+}
+
+.cell-number {
+  text-align: right;
+}
+
+
+/* styles for validation helpers
+----------------------------------------------------------*/
+
+.field-validation-error {
+  color: #a94442;
+  font-weight: bold;
+}
+
+.field-validation-valid {
+  display: none;
+}
+
+.input-validation-error {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  color: #a94442;
+}
+
+.input-validation-error:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}
+
+input[type="checkbox"].input-validation-error {
+  border: 0 none;
+}
+
+.validation-summary-errors {
+  color: #a94442;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.validation-summary-valid {
+  display: none;
+}
+
+
+/* Custom
+----------------------------------------------------------*/
+
+.table-form {
+  width: 100%;
+}
+
+.table-form .col-left {
+  width: 40%;
+}
+
+.table-form .col-right {
+  width: 60%;
+}
+
+.fa-icon a {
+  text-decoration: none;
+}
+
+.delete-icon {
+  color: #ff0000;
+}
+
+.delete-icon:hover {
+  color: #CC0000;
+}
+
+.delete-icon-disabled {
+  color: #FF9F9F;
+}
+
+.nav>li>.logout-link {
+  display: inline;
+  padding: 0;
+}
+
+.nav>li>.logout-link:hover,
+.nav>li>.logout-link:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.tooltip-icon {
+  color: #005499;
+  font-size: 0.9em;
+}
+
+
+/* Custom CSS for ui-select*/
+
+.ui-select-match-text {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 40px;
+}
+
+div.ui-grid-header-cell input[type="checkbox"] {
+  margin: 9px 0 0 6px;
+  width: auto;
+}
+
+
+/*Horizontal bar*/
+
+#floatBarsG {
+  position: relative;
+  width: 90px;
+  height: 11px;
+  margin: auto;
+  display: inline-block;
+}
+
+.floatBarsG {
+  position: absolute;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  width: 11px;
+  height: 11px;
+  animation-name: bounce_floatBarsG;
+  -o-animation-name: bounce_floatBarsG;
+  -ms-animation-name: bounce_floatBarsG;
+  -webkit-animation-name: bounce_floatBarsG;
+  -moz-animation-name: bounce_floatBarsG;
+  animation-duration: 0.845s;
+  -o-animation-duration: 0.845s;
+  -ms-animation-duration: 0.845s;
+  -webkit-animation-duration: 0.845s;
+  -moz-animation-duration: 0.845s;
+  animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-direction: normal;
+  -o-animation-direction: normal;
+  -ms-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  -moz-animation-direction: normal;
+  transform: scale(.3);
+  -o-transform: scale(.3);
+  -ms-transform: scale(.3);
+  -webkit-transform: scale(.3);
+  -moz-transform: scale(.3);
+}
+
+#floatBarsG_1 {
+  left: 0;
+  animation-delay: 0.336s;
+  -o-animation-delay: 0.336s;
+  -ms-animation-delay: 0.336s;
+  -webkit-animation-delay: 0.336s;
+  -moz-animation-delay: 0.336s;
+}
+
+#floatBarsG_2 {
+  left: 11px;
+  animation-delay: 0.4225s;
+  -o-animation-delay: 0.4225s;
+  -ms-animation-delay: 0.4225s;
+  -webkit-animation-delay: 0.4225s;
+  -moz-animation-delay: 0.4225s;
+}
+
+#floatBarsG_3 {
+  left: 22px;
+  animation-delay: 0.509s;
+  -o-animation-delay: 0.509s;
+  -ms-animation-delay: 0.509s;
+  -webkit-animation-delay: 0.509s;
+  -moz-animation-delay: 0.509s;
+}
+
+#floatBarsG_4 {
+  left: 34px;
+  animation-delay: 0.5955s;
+  -o-animation-delay: 0.5955s;
+  -ms-animation-delay: 0.5955s;
+  -webkit-animation-delay: 0.5955s;
+  -moz-animation-delay: 0.5955s;
+}
+
+#floatBarsG_5 {
+  left: 45px;
+  animation-delay: 0.672s;
+  -o-animation-delay: 0.672s;
+  -ms-animation-delay: 0.672s;
+  -webkit-animation-delay: 0.672s;
+  -moz-animation-delay: 0.672s;
+}
+
+#floatBarsG_6 {
+  left: 56px;
+  animation-delay: 0.7585s;
+  -o-animation-delay: 0.7585s;
+  -ms-animation-delay: 0.7585s;
+  -webkit-animation-delay: 0.7585s;
+  -moz-animation-delay: 0.7585s;
+}
+
+#floatBarsG_7 {
+  left: 67px;
+  animation-delay: 0.845s;
+  -o-animation-delay: 0.845s;
+  -ms-animation-delay: 0.845s;
+  -webkit-animation-delay: 0.845s;
+  -moz-animation-delay: 0.845s;
+}
+
+#floatBarsG_8 {
+  left: 79px;
+  animation-delay: 0.9315s;
+  -o-animation-delay: 0.9315s;
+  -ms-animation-delay: 0.9315s;
+  -webkit-animation-delay: 0.9315s;
+  -moz-animation-delay: 0.9315s;
+}
+
+@keyframes bounce_floatBarsG {
+  0% {
+    transform: scale(1);
+    background-color: #00457c;
+  }
+  100% {
+    transform: scale(.3);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@-o-keyframes bounce_floatBarsG {
+  0% {
+    -o-transform: scale(1);
+    background-color: #00457c;
+  }
+  100% {
+    -o-transform: scale(.3);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@-ms-keyframes bounce_floatBarsG {
+  0% {
+    -ms-transform: scale(1);
+    background-color: #00457c;
+  }
+  100% {
+    -ms-transform: scale(.3);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@-webkit-keyframes bounce_floatBarsG {
+  0% {
+    -webkit-transform: scale(1);
+    background-color: #00457c;
+  }
+  100% {
+    -webkit-transform: scale(.3);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@-moz-keyframes bounce_floatBarsG {
+  0% {
+    -moz-transform: scale(1);
+    background-color: #00457c;
+    ;
+  }
+  100% {
+    -moz-transform: scale(.3);
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+
+/* Custom Text Armway*/
+
+h3.aw-header {
+  color: #C92F35;
+}
+
+
+/* Custom Button*/
+
+btn-aw-blue {
+  background-color: #00457c;
+}
+
+btn-aw-green {
+  background-color: #009444;
+}
+
+btn-aw-lightgreen {
+  background-color: #72a86b;
+}
+
+btn-aw-darkgreen {
+  background-color: #006d30;
+}
+
+btn-aw-red {
+  background-color: #d31630;
+}
+
+btn-grey {
+  background-color: #333;
+  color: #fff;
+  border-color: #21252b;
+  border-bottom: 2px solid #181a1c;
+}
+
+
+/* Override btn-primary*/
+
+.btn-primary {
+  color: #fff;
+  background-color: #00457c;
+  border-color: #00457c;
+  border-bottom: 2px solid #1E203C;
+}
+
+.btn-primary:hover,
+.btn-primary.active:focus,
+.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #5F6A85;
+  border-color: #5F6A85;
+  border-bottom: 2px solid #00457c;
+  outline: none;
+}
+
+.btn-primary:active,
+.btn-primary.active {
+  color: #fff;
+  background-color: #00457c;
+  /*border-top: 2px solid #00457c;
+        margin-top: 2px;*/
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #00457c !important;
+  border-color: #00457c !important;
+  border-bottom: 2px solid #1E203C !important;
+}
+
+
+/* Override btn-success*/
+
+.btn-success {
+  color: #fff;
+  background-color: #006d30;
+  border-color: #006d30;
+  border-bottom: 2px solid #004714;
+}
+
+.btn-success:hover,
+.btn-success.active:focus,
+.btn-success:focus,
+.open>.dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #72a86b;
+  border-color: #72a86b;
+  border-bottom: 2px solid #006d30;
+  outline: none;
+}
+
+.btn-success:active,
+.btn-success.active {
+  color: #fff;
+  background-color: #006d30;
+  border-top: 2px solid #004714;
+  margin-top: 2px;
+}
+
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #006d30 !important;
+  border-color: #006d30 !important;
+  border-bottom: 2px solid #004714 !important;
+}
+
+
+/* Override bootstrap*/
+
+.nav a {
+  color: #00457c;
+}
+
+.ui-select-bootstrap .ui-select-choices-row.active>a {
+  background-color: #00457c !important;
+}
+
+.user-info {
+  color: #00457c;
+}
+
+.form-control:focus {
+  border-color: #00457c;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(29, 66, 106, 0.6);
+}
+
+
+/* Override Sb-admin*/
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+  border-top: none !important;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    margin-top: 65px;
+  }
+}
+
+#page-wrapper {
+  /*TODO: toggle for testing design, enable permanently when go live*/
+  /*background-image: url('../Images/armway-logo-large.gif');*/
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: right bottom 0;
+}
+
+
+/* Add padding-bottom to prevent bottom buttons be mixed with the logo*/
+
+#page-wrapper>.container-fluid {
+  padding-bottom: 150px;
+}
+
+
+/* Override ui-grid*/
+
+.grid-customized.ui-grid {
+  /*height: auto !important;*/
+}
+
+.grid-customized .ui-grid-viewport {
+  background-color: #fff;
+  /*height: auto !important;*/
+}
+
+
+/*HACK: remove this property from ui-grid-viewport when ui-grid is rendering to prevent grid's width display wrongly*/
+
+.grid-customized .ui-grid-render-container-body .ui-grid-viewport {
+  width: auto !important;
+}
+
+.grid-customized .ui-grid-pager-panel {
+  background-color: #fff;
+  position: relative !important;
+}
+
+
+/* mimic bootstrap clearfix */
+
+.grid-customized .ui-grid-pager-panel:before,
+.ui-grid-pager-panel:after {
+  display: table;
+  content: " ";
+}
+
+.grid-customized .ui-grid-pager-panel:after {
+  clear: both;
+}
+
+.ui-grid-header-cell-label+.ui-grid-invisible {
+  display: none;
+}
+
+.grid.header-wrap .ui-grid-header-cell .ui-grid-cell-contents {
+  white-space: normal;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body>.wrapper {
+  height: 100%;
+}
+
+#page-wrapper {
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 90px;
+  /*margin-bottom: -80px;*/
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+#footer {
+  height: 80px;
+  background-color: #00457c;
+  border-top: none !important;
+  background-image: url('../Images/armway-waves.gif');
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-blend-mode: multiply;
+}
+
+.text-footer {
+  color: #fff !important;
+}
+
+.form-group-update {
+  margin-bottom: 0 !important;
+}
+
+
+/* Modal fix */
+
+
+/* Prevent scrollbar from disappearance when open modal*/
+
+.modal-open {
+  overflow: auto;
+}
+
+
+/* Order Approval */
+
+.order-approval-heading {
+  margin-bottom: 15px;
+}
+
+.order-approval-form .form-group {
+  margin-bottom: 10px;
+}
+
+
+/* PV Log */
+
+
+/* HACK to allow 'clear' icon displayed well in form */
+
+.ui-select-with-clear .ui-select-match-text {
+  max-width: 65%;
+  padding-right: 0;
+  text-overflow: unset;
+}
+
+.ui-select-with-clear .ui-select-match-text~a {
+  padding-left: 0;
+}
+
+
+/* Common */
+
+.bottom-spacing {
+  margin-bottom: 6px;
+}
+
+.user-language {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+@media(min-width:768px) {
+  .user-language {
+    margin-top: -5px;
+    text-align: right;
+  }
+}
+
+.user-language a {
+  padding: 0 !important;
+}
+
+.user-language a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.user-language a.active:hover {
+  cursor: default;
+}

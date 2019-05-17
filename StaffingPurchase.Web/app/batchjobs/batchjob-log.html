@@ -1,0 +1,37 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Common.StartDate</label>
+				<div class="col-md-3">
+					<p class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup ng-model="vm.filter.startDate" is-open="vm.datePopup.startOpened" datepicker-options="dateOptions" ng-required="false" close-text="Close" />
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default" ng-click="vm.openDatePopup('startOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+						</span>
+					</p>
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Common.EndDate</label>
+				<div class="col-md-3">
+					<p class="input-group">
+						<input type="text" class="form-control" uib-datepicker-popup ng-model="vm.filter.endDate" is-open="vm.datePopup.endOpened" datepicker-options="dateOptions" ng-required="false" close-text="Close" />
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default" ng-click="vm.openDatePopup('endOpened')"><i class="glyphicon glyphicon-calendar"></i></button>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<button type="submit" value="search" class="btn btn-primary" ng-click="vm.searchBatchJobLog()">
+					<i class="fa fa-search"></i> {{ "Common.Search" | translate }}
+				</button>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.searched">
+	<div ui-grid="vm.gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOptions)"></div>
+</fieldset>

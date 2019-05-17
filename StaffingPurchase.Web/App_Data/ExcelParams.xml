@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExcelParams>
+  <Template name="ProductList">
+    <Param name="RowStart">2</Param>
+    <Param name="ColSku">1</Param>
+    <Param name="ColDescriptionVi">2</Param>
+    <Param name="ColPV">3</Param>
+    <Param name="ColPrice">4</Param>
+    <Param name="ColNetWeight">5</Param>
+    <Param name="ColDescriptionEn">6</Param>
+    <Param name="ColNote">7</Param>
+    <Param name="ColIsActive">8</Param>
+  </Template>
+  <Template name="AwardList">
+    <Param name="RowStart">2</Param>
+    <Param name="ColUser">1</Param>
+  </Template>
+</ExcelParams>

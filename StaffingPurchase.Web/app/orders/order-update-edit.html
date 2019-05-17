@@ -1,0 +1,47 @@
+﻿<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ "OrderUpdate.Edit" | translate }}</h4>
+</div>
+<div class="modal-body">
+	<div class="alert alert-danger" ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+	<form name="theForm" class="form-horizontal">
+		<div class="form-group">
+			<div class="col-md-4">
+				<label class="control-label" translate>Product.Sku</label>
+			</div>
+			<div class="col-md-8">
+				<label>{{vm.orderDetail.ProductSku}}</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-4">
+				<label class="control-label" translate>Product.Name</label>
+			</div>
+			<div class="col-md-8">
+				<label>{{vm.orderDetail.ProductName}}</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-4">
+
+				<label for="volume" class="control-label" translate>OrderDetail.Volume</label>
+			</div>
+			<div class="col-md-8">
+				<select id="volume" class="form-control" required ng-model="vm.orderDetail.Volume"
+						ng-options="volume for volume in vm.volumes"></select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-4">
+				<label for="warehouse" class="control-label">{{vm.isPrice?"Product.Price":"Product.PV" | translate}}</label>
+			</div>
+			<div class="col-md-8">
+				<label>{{vm.isPrice ? vm.orderDetail.Volume * vm.orderDetail.Price: (vm.orderDetail.Volume * vm.orderDetail.PV).toFixed(2)}}</label>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" ng-click="vm.cancel()" translate>Common.Cancel</button>
+	<button type="submit" class="btn btn-primary" ng-click="vm.save()" translate>Common.Save</button>
+</div>

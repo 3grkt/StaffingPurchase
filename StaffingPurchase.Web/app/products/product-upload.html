@@ -1,0 +1,41 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form" name="uploadForm">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-3">
+					{{ "Common.SelectFile" | translate }}
+					(<a href="javascript:;" ng-click="vm.downloadTemplate()">{{ "Common.DownloadSampleTemplate" | translate }}</a>)
+				</label>
+				<div class="col-md-9">
+					<input type="file" ngf-select ng-model="vm.uploadedFile" name="file"
+						   accept="*" ngf-max-size="4MB" required
+						   ngf-model-invalid="errorFile">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-3">
+					{{'Common.SheetName' | translate}}
+					<i class="fa fa-question-circle tooltip-icon" uib-tooltip="{{'Common.SheetName.Tooltip' | translate}}"
+					   tooltip-placement="right" tooltip-class="tooltip-icon"></i>
+				</label>
+				<div class="col-md-9">
+					<input type="text" class="form-control" ng-model="vm.sheetName"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="col-md-offset-3 col-md-9">
+					<button class="btn btn-primary" ng-click="vm.uploadFile(vm.uploadedFile)" ng-disabled="!uploadForm.$valid"  translate>Common.Upload</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.uploaded">
+	<h4 translate>Product.UploadedItems</h4>
+	<div ui-grid="vm.gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOptions)"></div>
+</fieldset>

@@ -1,0 +1,22 @@
+﻿@model DateTime?
+
+@{
+	var controlId = ViewData.ModelMetadata.PropertyName + "DatePicker";
+	var bootstrapDatePickerFormat = "DD/MM/YYYY";
+}
+<div class="input-group date" id="@controlId">
+	@Html.TextBox("", Html.GetDateString(Model), new {@class = "form-control", data_date_format = bootstrapDatePickerFormat, data_val = "false"})
+	<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+    </span>
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		$('#@controlId').datetimepicker();
+
+		@*// hide when a date is selected
+        $('#@controlId').on('dp.change', function (ev) {
+            $('#@controlId').hide();
+        });*@
+	})
+</script>

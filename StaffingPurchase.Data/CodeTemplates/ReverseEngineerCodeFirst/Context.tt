@@ -1,0 +1,73 @@
+<#@ template hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude" #>
+<#@
+ output extension=".cs" #>
+ 
+<#
+	// UPDATE DOMAIN NAMESPACE HERE
+	var domainNamespace= "StaffingPurchase.Core.Domain";
+	// UPDATE MAPPING NAMESPACE HERE
+	var mappingNamespace = "StaffingPurchase.Data.Mapping";
+
+    var efHost = (EfTextTemplateHost)Host;
+    var code = new CodeGenerationTools(this);
+#>
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using <#= code.EscapeNamespace(domainNamespace) #>;
+using <#= code.EscapeNamespace(mappingNamespace) #>;
+
+namespace <#= code.EscapeNamespace(GetContextNamespace()) #>
+{
+    public partial class <#= /*efHost.EntityContainer.Name*/ GetContextName() #> : DbContext
+    {
+        static <#= /*efHost.EntityContainer.Name*/ GetContextName() #>()
+        {
+            Database.SetInitializer<<#= /*efHost.EntityContainer.Name*/ GetContextName() #>>(null);
+        }
+
+        public <#= /*efHost.EntityContainer.Name*/ GetContextName() #>()
+            : base("Name=<#= efHost.EntityContainer.Name #>")
+        {
+        }
+
+<#
+    foreach (var set in efHost.EntityContainer.BaseEntitySets.OfType<EntitySet>())
+    {
+#>
+        public DbSet<<#= ReplaceTableName(set.ElementType.Name) #>> <#= ReplaceTableName(set.Name) #> { get; set; }
+<#
+    }
+#>
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+<#
+    foreach (var set in efHost.EntityContainer.BaseEntitySets.OfType<EntitySet>())
+    {
+#>
+            modelBuilder.Configurations.Add(new <#= ReplaceTableName(set.ElementType.Name) #>Map());
+<#
+    }
+#>
+        }
+    }
+}
+
+<#+
+public string ReplaceTableName(string tableName)
+{
+	string replacedName = tableName.StartsWith("tbl") ? tableName.Replace("tbl", "") : tableName;
+	return replacedName;
+}
+
+public string GetContextName()
+{
+	return "ABODataContext";
+}
+
+public string GetContextNamespace()
+{
+	return "StaffingPurchase.Data";
+}
+#>

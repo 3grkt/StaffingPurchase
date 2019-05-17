@@ -1,0 +1,19 @@
+############################################
+# Database Script Log File ###
+#
+# Log Format:
+# yyyy-mm-dd
+# <owner>	<script 1 name>
+# <owner>	<script 2 name>
+#
+# Example:
+# 2013-10-01
+# Tri	usp_tblOrder_Search.sql
+# Cuong	usp_tblUser_Search.sql	
+#
+# 2013-10-02
+# Tri	usp_tblReicever_Insert.sql
+#
+############################################
+2015-03-15
+Tri	Update_tblDataLog.sql

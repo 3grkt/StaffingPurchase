@@ -1,0 +1,16 @@
+<div>
+    <fieldset class="fieldset">
+        <legend translate>Policy.Info</legend>
+        <div>
+            <ul>
+                <li ng-repeat="item in vm.allPolicies">
+                    {{item.Description}}: {{item.Value | customNumber}}
+                </li>
+				<li>
+					<a href="javascript:;" ng-click="vm.downloadPolicyFile()">{{ "Policy.DownloadFile" | translate }}</a>
+					<span>({{ "Common.UpdatedDate" | translate }}: {{ vm.policyDocument.ModifiedDate | customDate }})</span>
+				</li>
+            </ul>
+        </div>
+    </fieldset>
+</div>

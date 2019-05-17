@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account.FailedToLogin" xml:space="preserve">
+    <value>User name or password is invalid. Please check again!</value>
+  </data>
+  <data name="Account.Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Account.UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="Award.ConfirmDelete" xml:space="preserve">
+    <value>Are you sure to delete the selected award ? </value>
+  </data>
+  <data name="Award.Create" xml:space="preserve">
+    <value>Add PV Award</value>
+  </data>
+  <data name="Award.Edit" xml:space="preserve">
+    <value>Edit PV Award</value>
+  </data>
+  <data name="Award.FailedToCreate" xml:space="preserve">
+    <value>Unable to create the PV Award. Pls contact Admin.</value>
+  </data>
+  <data name="Award.FailedToDelete" xml:space="preserve">
+    <value>Unalbe to delete award. Please contact Admin!</value>
+  </data>
+  <data name="Award.FailedToUpdate" xml:space="preserve">
+    <value>Unalbe to update award. Please contact Admin!</value>
+  </data>
+  <data name="Award.Name" xml:space="preserve">
+    <value>Award name</value>
+  </data>
+  <data name="Award.NotFound" xml:space="preserve">
+    <value>Seleted award is not found.</value>
+  </data>
+  <data name="Award.PV" xml:space="preserve">
+    <value>Point value (PV)</value>
+  </data>
+  <data name="Award.SuccessToDelete" xml:space="preserve">
+    <value>The selected award is already deleted successfully</value>
+  </data>
+  <data name="Award.SuccessToSave" xml:space="preserve">
+    <value>The award is saved successfully.</value>
+  </data>
+  <data name="Award.Upload.Success" xml:space="preserve">
+    <value>The qualifier list of award is uploaded successfully.</value>
+  </data>
+  <data name="BatchJob.DetailPage" xml:space="preserve">
+    <value>Log Details</value>
+  </data>
+  <data name="BatchJob.Message" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="BatchJob.RunInfoInvalid" xml:space="preserve">
+    <value>User/ Key data not correct</value>
+  </data>
+  <data name="BatchJob.Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="Common.All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Common.AppDescription" xml:space="preserve">
+    <value>Product entitlement system</value>
+  </data>
+  <data name="Common.AppFullName" xml:space="preserve">
+    <value>Internal Order</value>
+  </data>
+  <data name="Common.AppName" xml:space="preserve">
+    <value>Internal Order</value>
+  </data>
+  <data name="Common.Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Common.Begin" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common.Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common.Copyright" xml:space="preserve">
+    <value>Amway Copyright</value>
+  </data>
+  <data name="Common.DataNotFound" xml:space="preserve">
+    <value>Data is not found</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common.Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Common.DownloadSampleTemplate" xml:space="preserve">
+    <value>Download sample</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="Common.EndDate" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="Common.Excel" xml:space="preserve">
+    <value>Export file</value>
+  </data>
+  <data name="Common.FailedToDownloadFile" xml:space="preserve">
+    <value>Unalbe to download the file. Please contact Admin!</value>
+  </data>
+  <data name="Common.Hello" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Common.Import" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Common.Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Common.Language.English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Common.Language.Vietnamese" xml:space="preserve">
+    <value>Vietnamese</value>
+  </data>
+  <data name="Common.Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Common.Message.NoRecordFound" xml:space="preserve">
+    <value>Data is not found</value>
+  </data>
+  <data name="Common.Ok" xml:space="preserve">
+    <value>Accepted!</value>
+  </data>
+  <data name="Common.Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Common.Page.Display" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="Common.Page.First" xml:space="preserve">
+    <value>Home page</value>
+  </data>
+  <data name="Common.Page.FoundRecords" xml:space="preserve">
+    <value>{0} result</value>
+  </data>
+  <data name="Common.Page.Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Common.Page.Go.Hint" xml:space="preserve">
+    <value>Change page</value>
+  </data>
+  <data name="Common.Page.Last" xml:space="preserve">
+    <value>End page</value>
+  </data>
+  <data name="Common.Page.Next" xml:space="preserve">
+    <value>Next page</value>
+  </data>
+  <data name="Common.Page.Previous" xml:space="preserve">
+    <value>Previous page</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common.Save" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="Common.Search" xml:space="preserve">
+    <value>Seach</value>
+  </data>
+  <data name="Common.SelectFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Common.SheetName" xml:space="preserve">
+    <value>Sheet name</value>
+  </data>
+  <data name="Common.SheetName.Tooltip" xml:space="preserve">
+    <value>Leave empty to choose the first sheet</value>
+  </data>
+  <data name="Common.SheetNotFound" xml:space="preserve">
+    <value>Cannot find out the sheet choosen</value>
+  </data>
+  <data name="Common.StartDate" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="Common.UpdatedDate" xml:space="preserve">
+    <value>Update date</value>
+  </data>
+  <data name="Common.Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Common.Validation.Required" xml:space="preserve">
+    <value>Please fullfil all data requested</value>
+  </data>
+  <data name="Common.Validation.StringMaxLength" xml:space="preserve">
+    <value>Do not allow to key over {1} characteristic</value>
+  </data>
+  <data name="Common.Verify" xml:space="preserve">
+    <value>Verifying</value>
+  </data>
+  <data name="Department.Name" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.HrAdminPending" xml:space="preserve">
+    <value>Proceeding by HR Admin</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.HrManagerPending" xml:space="preserve">
+    <value>Proceeding by HR Manager</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.RejectedByHrManager" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="Enums.OrderStatus.Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="Enums.OrderStatus.Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Enums.OrderStatus.Packaged" xml:space="preserve">
+    <value>Packaged</value>
+  </data>
+  <data name="Enums.OrderStatus.Submitted" xml:space="preserve">
+    <value>Submitted</value>
+  </data>
+  <data name="Enums.OrderType.cash" xml:space="preserve">
+    <value>21% discount product purcharsing</value>
+  </data>
+  <data name="Enums.OrderType.PV" xml:space="preserve">
+    <value>PV </value>
+  </data>
+  <data name="Enums.UserRole.Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="Enums.UserRole.HRAdmin" xml:space="preserve">
+    <value>HR Admin</value>
+  </data>
+  <data name="Enums.UserRole.HRManager" xml:space="preserve">
+    <value>HR Manager</value>
+  </data>
+  <data name="Enums.UserRole.IT" xml:space="preserve">
+    <value>IT</value>
+  </data>
+  <data name="Enums.UserRole.Warehouse" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="Error.DataException" xml:space="preserve">
+    <value>System error! Please contact User Admin</value>
+  </data>
+  <data name="Error.DataKeyConflict" xml:space="preserve">
+    <value>The data used, cannot change/ delete</value>
+  </data>
+  <data name="Error.Forbidden.Description" xml:space="preserve">
+    <value>You need an authorization to access</value>
+  </data>
+  <data name="Error.Forbidden.PageTitle" xml:space="preserve">
+    <value>You need an authorization to access</value>
+  </data>
+  <data name="Error.NotAuthorized" xml:space="preserve">
+    <value>Not authorized</value>
+  </data>
+  <data name="Error.NotFound.Description" xml:space="preserve">
+    <value>The webpage not to be found. Please choose another link </value>
+  </data>
+  <data name="Error.NotFound.PageTitle" xml:space="preserve">
+    <value>Not Found</value>
+  </data>
+  <data name="Error.ServerError.Description" xml:space="preserve">
+    <value>System error! Please contact User Admin</value>
+  </data>
+  <data name="Error.ServerError.PageTitle" xml:space="preserve">
+    <value>System error</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>Process error! Please contact User Admin</value>
+  </data>
+  <data name="Level.ConfirmCancelUpdateAll" xml:space="preserve">
+    <value>Are you sure of cancelation?</value>
+  </data>
+  <data name="Level.ConfirmUpdateAll" xml:space="preserve">
+    <value>Are you sure of update?</value>
+  </data>
+  <data name="Level.Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Level.Name" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Level.UpdateAllSuccess" xml:space="preserve">
+    <value>Updated successfully</value>
+  </data>
+  <data name="LevelGroup.AddSuccess" xml:space="preserve">
+    <value>Add Group successfully</value>
+  </data>
+  <data name="LevelGroup.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="LevelGroup.ConfirmAdd" xml:space="preserve">
+    <value>Are you sure of adding new Group?</value>
+  </data>
+  <data name="LevelGroup.ConfirmCancelUpdateAll" xml:space="preserve">
+    <value>Are you sure of cancelation?</value>
+  </data>
+  <data name="LevelGroup.ConfirmDelete" xml:space="preserve">
+    <value>Are you sure of deleting the group?</value>
+  </data>
+  <data name="LevelGroup.ConfirmUpdateAll" xml:space="preserve">
+    <value>Are you sure of update?</value>
+  </data>
+  <data name="LevelGroup.Create" xml:space="preserve">
+    <value>Add new Group</value>
+  </data>
+  <data name="LevelGroup.DeleteExisted" xml:space="preserve">
+    <value>Fail to delete! Level used in history</value>
+  </data>
+  <data name="LevelGroup.DeleteSuccess" xml:space="preserve">
+    <value>Deleted sucessfully</value>
+  </data>
+  <data name="LevelGroup.Name" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="LevelGroup.PV" xml:space="preserve">
+    <value>PV entitlement</value>
+  </data>
+  <data name="LevelGroup.Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LevelGroup.UpdateAllSuccess" xml:space="preserve">
+    <value>Updated sucessfully</value>
+  </data>
+  <data name="Location.Name" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Menu.Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Menu.AdminReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Menu.AdminReport.InternalRequisitionForm" xml:space="preserve">
+    <value>Internal Requisition Form</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryDiscountProduct" xml:space="preserve">
+    <value>Symmary Discount Product</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryOrderByIndividualDiscount" xml:space="preserve">
+    <value>Summary Order By Individual - Discount</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryOrderByIndividualPV" xml:space="preserve">
+    <value>Summary Order By Individual</value>
+  </data>
+  <data name="Menu.Awards" xml:space="preserve">
+    <value>Awards</value>
+  </data>
+  <data name="Menu.ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Menu.CreateAward" xml:space="preserve">
+    <value>Add Award</value>
+  </data>
+  <data name="Menu.Home" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="Menu.LevelGroup" xml:space="preserve">
+    <value>Level/Group</value>
+  </data>
+  <data name="Menu.MaintainPolicy" xml:space="preserve">
+    <value>Policy Content</value>
+  </data>
+  <data name="Menu.MaintainProductList" xml:space="preserve">
+    <value>Update Product List</value>
+  </data>
+  <data name="Menu.OrderApproval" xml:space="preserve">
+    <value>Orders in Process</value>
+  </data>
+  <data name="Menu.OrderHistory" xml:space="preserve">
+    <value>Orders History</value>
+  </data>
+  <data name="Menu.Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Menu.OrderUpdate" xml:space="preserve">
+    <value>Update Order</value>
+  </data>
+  <data name="Menu.OrderWarehouse" xml:space="preserve">
+    <value>Orders to package</value>
+  </data>
+  <data name="Menu.PlaceOrder" xml:space="preserve">
+    <value>Ordering</value>
+  </data>
+  <data name="Menu.UploadAwardList" xml:space="preserve">
+    <value>Upload Award List</value>
+  </data>
+  <data name="Menu.UploadProductList" xml:space="preserve">
+    <value>Upload Product List</value>
+  </data>
+  <data name="Menu.User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="Menu.UserProfile" xml:space="preserve">
+    <value>User Profile</value>
+  </data>
+  <data name="Menu.ViewBatchJobLog" xml:space="preserve">
+    <value>View batch job log</value>
+  </data>
+  <data name="Menu.ViewPvLog" xml:space="preserve">
+    <value>PV Balance</value>
+  </data>
+  <data name="Menu.WarehouseReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Modal.Alert" xml:space="preserve">
+    <value>Alert</value>
+  </data>
+  <data name="Modal.Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Order.Cancel" xml:space="preserve">
+    <value>Cancel All</value>
+  </data>
+  <data name="Order.CancelSuccess" xml:space="preserve">
+    <value>Order is cancelled successfully.</value>
+  </data>
+  <data name="Order.Confirm.DeleteOrder" xml:space="preserve">
+    <value>Confirm for order cancellation</value>
+  </data>
+  <data name="Order.Confirm.DeleteOrderDetail" xml:space="preserve">
+    <value>Confirm for delete</value>
+  </data>
+  <data name="Order.Confirm.SubmitOrder" xml:space="preserve">
+    <value>Confirm for ordering</value>
+  </data>
+  <data name="Order.CreateUpdate" xml:space="preserve">
+    <value>Add/ Save</value>
+  </data>
+  <data name="Order.Looked.Caption" xml:space="preserve">
+    <value>Your order is in proceeding, please wait for opened date of the next order</value>
+  </data>
+  <data name="Order.NotSelectOrderDetailToRemove" xml:space="preserve">
+    <value>Please select item to delete</value>
+  </data>
+  <data name="Order.OrderDate" xml:space="preserve">
+    <value>Order date</value>
+  </data>
+  <data name="Order.OrderedEnd" xml:space="preserve">
+    <value>Order end date</value>
+  </data>
+  <data name="Order.OrderedStart" xml:space="preserve">
+    <value>Order start date</value>
+  </data>
+  <data name="Order.OrderSession" xml:space="preserve">
+    <value>Order period</value>
+  </data>
+  <data name="Order.OrderType" xml:space="preserve">
+    <value>Order type</value>
+  </data>
+  <data name="Order.PriceMode" xml:space="preserve">
+    <value>21% discount purcharsing order</value>
+  </data>
+  <data name="Order.PVMode" xml:space="preserve">
+    <value>PV order</value>
+  </data>
+  <data name="Order.RemainPV" xml:space="preserve">
+    <value>Remain PV</value>
+  </data>
+  <data name="Order.Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Order.RemoveAll" xml:space="preserve">
+    <value>Remove All</value>
+  </data>
+  <data name="Order.Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Order.Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Order.SubmitSuccess" xml:space="preserve">
+    <value>Your order is saved successfully</value>
+  </data>
+  <data name="Order.Submitted.Caption" xml:space="preserve">
+    <value>The order is already submited</value>
+  </data>
+  <data name="Order.Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="Order.Total.Caption" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="Order.Total.PV.Caption" xml:space="preserve">
+    <value>Total PV</value>
+  </data>
+  <data name="Order.TotalPrice" xml:space="preserve">
+    <value>Total Price</value>
+  </data>
+  <data name="Order.TotalPriceWithDiscount" xml:space="preserve">
+    <value>Total price after 21% discount</value>
+  </data>
+  <data name="Order.TotalPV" xml:space="preserve">
+    <value>Total PV</value>
+  </data>
+  <data name="Order.Type" xml:space="preserve">
+    <value>Order type</value>
+  </data>
+  <data name="Order.UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="Order.Validation.IsLocked" xml:space="preserve">
+    <value>The order locked</value>
+  </data>
+  <data name="Order.Validation.IsSubmitted" xml:space="preserve">
+    <value>The order submited</value>
+  </data>
+  <data name="Order.Validation.NotEligibleUser" xml:space="preserve">
+    <value>Invalid user! Your working end date is prior to order start date</value>
+  </data>
+  <data name="Order.Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Order.ValueDescription" xml:space="preserve">
+    <value>Value (PV or VND)</value>
+  </data>
+  <data name="OrderBatch.Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="OrderBatch.ConfirmApprove" xml:space="preserve">
+    <value>Are you sure of approval?</value>
+  </data>
+  <data name="OrderBatch.ConfirmReject" xml:space="preserve">
+    <value>Are you sure of refusing?</value>
+  </data>
+  <data name="OrderBatch.FailedToUpdate" xml:space="preserve">
+    <value>Update fail! Please contact Admin user</value>
+  </data>
+  <data name="OrderBatch.NoData" xml:space="preserve">
+    <value>No Orders found</value>
+  </data>
+  <data name="OrderBatch.OrderListCast" xml:space="preserve">
+    <value>List of 21% discount product orders</value>
+  </data>
+  <data name="OrderBatch.OrderListPV" xml:space="preserve">
+    <value>List of PV product orders</value>
+  </data>
+  <data name="OrderBatch.Range" xml:space="preserve">
+    <value>Order Period</value>
+  </data>
+  <data name="OrderBatch.Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="OrderBatch.RejectReason" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+  <data name="OrderBatch.SuccessToApprove" xml:space="preserve">
+    <value>The Order is approved</value>
+  </data>
+  <data name="OrderBatch.SuccessToReject" xml:space="preserve">
+    <value>The order is rejected</value>
+  </data>
+  <data name="OrderDetail.AddOrderDetail" xml:space="preserve">
+    <value>Add/ Save</value>
+  </data>
+  <data name="OrderDetail.AddSuccess" xml:space="preserve">
+    <value>The item is added successfully</value>
+  </data>
+  <data name="OrderDetail.Cancel.AddOrderDetail" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="OrderDetail.DeleteOrderDetail" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="OrderDetail.DeleteSuccess" xml:space="preserve">
+    <value>Delete Successfully</value>
+  </data>
+  <data name="OrderDetail.FindOrderDetail" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="OrderDetail.Validation.NotEnoughPV" xml:space="preserve">
+    <value>Your PV is not enough</value>
+  </data>
+  <data name="OrderDetail.Validation.OutOfOverPrice" xml:space="preserve">
+    <value>Over number of products permited ( {0} each).</value>
+  </data>
+  <data name="OrderDetail.Validation.UnselectProduct" xml:space="preserve">
+    <value>Please choose a product</value>
+  </data>
+  <data name="OrderDetail.Volume" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="OrderHistory.NoData" xml:space="preserve">
+    <value>Can not find</value>
+  </data>
+  <data name="OrderHistory.NoDate" xml:space="preserve">
+    <value>Item not found</value>
+  </data>
+  <data name="OrderPackage.Caption.NotEnoughVolume" xml:space="preserve">
+    <value>Not enough quantity</value>
+  </data>
+  <data name="OrderPackage.DiscountOrder.Packaged" xml:space="preserve">
+    <value>Discount product order was packed</value>
+  </data>
+  <data name="OrderPackage.DiscountOrderNotFound" xml:space="preserve">
+    <value>The order not found! It is not available or already packed!</value>
+  </data>
+  <data name="OrderPackage.Edit" xml:space="preserve">
+    <value>Are your sure of packaging?</value>
+  </data>
+  <data name="OrderPackage.Note" xml:space="preserve">
+    <value>Note! Please list out the orders in details</value>
+  </data>
+  <data name="OrderPackage.PackageAll.Caution" xml:space="preserve">
+    <value>Note: Unable to remark on a package when packaging all orders at once</value>
+  </data>
+  <data name="OrderPackage.PVOrder.Packaged" xml:space="preserve">
+    <value>PV order was packed</value>
+  </data>
+  <data name="OrderPackage.PVOrderNotFound" xml:space="preserve">
+    <value>The order not found! It is not available or already packed!</value>
+  </data>
+  <data name="OrderPackage.Validation.AlreadyPackaged" xml:space="preserve">
+    <value>The order packed</value>
+  </data>
+  <data name="OrderPackage.Verify" xml:space="preserve">
+    <value>Verifying</value>
+  </data>
+  <data name="OrderReport.BatchDateRequired" xml:space="preserve">
+    <value>Please choose the period </value>
+  </data>
+  <data name="OrderReport.FailedToReport" xml:space="preserve">
+    <value>System error! Please contact User Admin</value>
+  </data>
+  <data name="OrderReport.NoDataToReport" xml:space="preserve">
+    <value>No data for report</value>
+  </data>
+  <data name="OrderReport.PrintOrderDetail" xml:space="preserve">
+    <value>Print order detail</value>
+  </data>
+  <data name="OrderReport.PrintPackagedOrder" xml:space="preserve">
+    <value>Print the packaged order</value>
+  </data>
+  <data name="OrderReport.PrintSuccess" xml:space="preserve">
+    <value>Printed successfully</value>
+  </data>
+  <data name="OrderReport.SessionDate" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="OrderType.Cash" xml:space="preserve">
+    <value> 21% discount purchase order</value>
+  </data>
+  <data name="OrderType.PV" xml:space="preserve">
+    <value>PV Order</value>
+  </data>
+  <data name="OrderUpdate.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="OrderUpdate.Confirm.SaveChange" xml:space="preserve">
+    <value>Do you want to save the update ?</value>
+  </data>
+  <data name="OrderUpdate.Edit" xml:space="preserve">
+    <value>Change product</value>
+  </data>
+  <data name="OrderUpdate.OrderFound" xml:space="preserve">
+    <value>Result found</value>
+  </data>
+  <data name="OrderUpdate.OrderNotFound" xml:space="preserve">
+    <value>Unable to find any orders</value>
+  </data>
+  <data name="OrderUpdate.SaveSuccess" xml:space="preserve">
+    <value>Saved successfully!</value>
+  </data>
+  <data name="OrderUpdate.Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="OrderUpdate.Validation.ExistOverPrice" xml:space="preserve">
+    <value>Over number of products permited</value>
+  </data>
+  <data name="OrderUpdate.Validation.NoChange" xml:space="preserve">
+    <value>No update.</value>
+  </data>
+  <data name="OrderUpdate.Validation.NotEnoughPV" xml:space="preserve">
+    <value>Not enough PV</value>
+  </data>
+  <data name="OrderWarehouse.Caution.AfterPackaging" xml:space="preserve">
+    <value>Note: if you could not find the function of printing the report ater packaging, pls press F5 to reload the page.</value>
+  </data>
+  <data name="OrderWarehouse.Department.NoApprovedOrder" xml:space="preserve">
+    <value>Unalbe to find the department of orders.</value>
+  </data>
+  <data name="OrderWarehouse.PackageAllOrder" xml:space="preserve">
+    <value>Package all orders</value>
+  </data>
+  <data name="OrderWarehouse.PackageOrder" xml:space="preserve">
+    <value>Package</value>
+  </data>
+  <data name="OrderWarehouse.PackageSuccess" xml:space="preserve">
+    <value>Packaged successfully</value>
+  </data>
+  <data name="OrderWarehouse.PrintAllOrder" xml:space="preserve">
+    <value>Print all orders</value>
+  </data>
+  <data name="OrderWarehouse.PrintOrder" xml:space="preserve">
+    <value>Print Order</value>
+  </data>
+  <data name="OrderWarehouse.Validation.UnselectDepartment" xml:space="preserve">
+    <value>Please select Department</value>
+  </data>
+  <data name="Packaged" xml:space="preserve">
+    <value>Packaged</value>
+  </data>
+  <data name="PageTitle.AdminReport.InternalRequisitionForm" xml:space="preserve">
+    <value>Internal Requisition Form</value>
+  </data>
+  <data name="PageTitle.AdminReport.OrderByIndividualDiscount" xml:space="preserve">
+    <value>Summary Purchasing Order By Individual - Discounted Product</value>
+  </data>
+  <data name="PageTitle.AdminReport.OrderByIndividualPV" xml:space="preserve">
+    <value>Summary Order By Individual - PV Entitlement</value>
+  </data>
+  <data name="PageTitle.AdminReport.SummaryDiscountProduct" xml:space="preserve">
+    <value>Summary of Purchasing Discount Product</value>
+  </data>
+  <data name="PageTitle.CreateAward" xml:space="preserve">
+    <value>Add Award</value>
+  </data>
+  <data name="PageTitle.Home" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="PageTitle.Login" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="PageTitle.MaintainPolicy" xml:space="preserve">
+    <value>Policy content</value>
+  </data>
+  <data name="PageTitle.MaintainProductList" xml:space="preserve">
+    <value>Update Product List</value>
+  </data>
+  <data name="PageTitle.OrderAdminReport" xml:space="preserve">
+    <value>Admin Report</value>
+  </data>
+  <data name="PageTitle.OrderWarehouse" xml:space="preserve">
+    <value>Orders in packaging process</value>
+  </data>
+  <data name="PageTitle.OrderWarehouseReport" xml:space="preserve">
+    <value>Warehouse Report</value>
+  </data>
+  <data name="PageTitle.ProductDetail" xml:space="preserve">
+    <value>Details of product</value>
+  </data>
+  <data name="PageTitle.UploadAwardList" xml:space="preserve">
+    <value>Upload award winner list</value>
+  </data>
+  <data name="PageTitle.UploadProductList" xml:space="preserve">
+    <value>Upload Product List</value>
+  </data>
+  <data name="PageTitle.User" xml:space="preserve">
+    <value>User list</value>
+  </data>
+  <data name="PageTitle.ViewBatchJobLog" xml:space="preserve">
+    <value>View batch job log</value>
+  </data>
+  <data name="PageTitle.ViewOrder" xml:space="preserve">
+    <value>Order History</value>
+  </data>
+  <data name="PageTitle.ViewPvLog" xml:space="preserve">
+    <value>PV Balance</value>
+  </data>
+  <data name="Policy.ConfirmUpdate" xml:space="preserve">
+    <value>Are you sure of updating the policy?</value>
+  </data>
+  <data name="Policy.DownloadFile" xml:space="preserve">
+    <value>Download sample template of Policy</value>
+  </data>
+  <data name="Policy.FailedToUpdate" xml:space="preserve">
+    <value>Failed to update! Please contact admin</value>
+  </data>
+  <data name="Policy.Info" xml:space="preserve">
+    <value>Policy Content</value>
+  </data>
+  <data name="Policy.SuccessToUpdate" xml:space="preserve">
+    <value>Updated policy successfully</value>
+  </data>
+  <data name="Policy.Upload.Success" xml:space="preserve">
+    <value>The policy file is updated successfully.</value>
+  </data>
+  <data name="Policy.Validation.MaxLengthExceed" xml:space="preserve">
+    <value>Over the max number (({0} degits)</value>
+  </data>
+  <data name="Policy.Validation.PositiveNumberRequired" xml:space="preserve">
+    <value>Positive Number is  Required</value>
+  </data>
+  <data name="Policy.Validation.StartOrEndDayInvalid" xml:space="preserve">
+    <value>The start date &amp; end date of Purchasing program is invalid.</value>
+  </data>
+  <data name="Product.ActiveOnly" xml:space="preserve">
+    <value>Only actively product</value>
+  </data>
+  <data name="Product.Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Product.ConfirmDelete" xml:space="preserve">
+    <value>Are you sure of deleting the selected product?</value>
+  </data>
+  <data name="Product.Id" xml:space="preserve">
+    <value>SKU code</value>
+  </data>
+  <data name="Product.IsActive" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Product.Name" xml:space="preserve">
+    <value>SKU Name</value>
+  </data>
+  <data name="Product.NameEn" xml:space="preserve">
+    <value>Name (English)</value>
+  </data>
+  <data name="Product.NetWeight" xml:space="preserve">
+    <value>Net weight</value>
+  </data>
+  <data name="Product.Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Product.Price.Caption" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="Product.PriceDiscount.Caption" xml:space="preserve">
+    <value>Unit price after discounted</value>
+  </data>
+  <data name="Product.PV" xml:space="preserve">
+    <value>PV</value>
+  </data>
+  <data name="Product.PV.Caption" xml:space="preserve">
+    <value>PV/ SKU</value>
+  </data>
+  <data name="Product.Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="Product.SelectedName.Caption" xml:space="preserve">
+    <value>You just selected</value>
+  </data>
+  <data name="Product.Sku" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Product.SuccessToDelete" xml:space="preserve">
+    <value>The selected product is deleted successfully.</value>
+  </data>
+  <data name="Product.SuccessToUpdate" xml:space="preserve">
+    <value>The selected product is updated successfully.</value>
+  </data>
+  <data name="Product.TotalPrice" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Product.Upload.Success" xml:space="preserve">
+    <value>The product list is uploaded successfully.</value>
+  </data>
+  <data name="Product.UploadedItems" xml:space="preserve">
+    <value>Product is uploaded</value>
+  </data>
+  <data name="Product.Validation.SkuExisted" xml:space="preserve">
+    <value>SKU existed, please choose another</value>
+  </data>
+  <data name="ProgressBar.Loading" xml:space="preserve">
+    <value>Data is loading</value>
+  </data>
+  <data name="PVLog.AwardedPV" xml:space="preserve">
+    <value>Awarded PV </value>
+  </data>
+  <data name="PVLog.BirthdayRewardedPV" xml:space="preserve">
+    <value>PV birthday entitled</value>
+  </data>
+  <data name="PVLog.Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="PVLog.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="PVLog.Description.AwardedOnBirthday" xml:space="preserve">
+    <value>Entitled PV on birthday</value>
+  </data>
+  <data name="PVLog.Description.MonthlyRewarded" xml:space="preserve">
+    <value>Mothly PV entitlement</value>
+  </data>
+  <data name="PVLog.Description.PayOrderPV" xml:space="preserve">
+    <value>Order by PV entitled</value>
+  </data>
+  <data name="PVLog.Description.UpdatedByAdmin" xml:space="preserve">
+    <value>Admin has changed the order</value>
+  </data>
+  <data name="PVLog.Description.UserAwarded" xml:space="preserve">
+    <value>Awarded PV of "{0}"</value>
+  </data>
+  <data name="PVLog.LogDate" xml:space="preserve">
+    <value>Change date</value>
+  </data>
+  <data name="PVLog.Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="PVLog.MonthlyRewardedPV" xml:space="preserve">
+    <value>Available PV entitlement</value>
+  </data>
+  <data name="PVLog.OrderingPV" xml:space="preserve">
+    <value>Used PV</value>
+  </data>
+  <data name="PVLog.PreviousSessionPV" xml:space="preserve">
+    <value>Previous balance PV </value>
+  </data>
+  <data name="PVLog.RemainingPV" xml:space="preserve">
+    <value>Current balance PV</value>
+  </data>
+  <data name="Report.Exception.NoRecord" xml:space="preserve">
+    <value>Not found data requested.</value>
+  </data>
+  <data name="Report.ExportExcel" xml:space="preserve">
+    <value>Export to Excel</value>
+  </data>
+  <data name="Report.ExportFailed" xml:space="preserve">
+    <value>Unable to export report</value>
+  </data>
+  <data name="Report.ExportSuccessful" xml:space="preserve">
+    <value>Export to Excel File successfully</value>
+  </data>
+  <data name="Report.Preview" xml:space="preserve">
+    <value>Review the report</value>
+  </data>
+  <data name="Report.Preview.NoResult" xml:space="preserve">
+    <value>Not found data requested.</value>
+  </data>
+  <data name="Report.StartDownloading" xml:space="preserve">
+    <value>Starting to downloading the report</value>
+  </data>
+  <data name="Report.Summary.TotalAmount" xml:space="preserve">
+    <value>Total quantity</value>
+  </data>
+  <data name="Report.Summary.TotalDiscountedPrice" xml:space="preserve">
+    <value>Total Amount (after discounted)</value>
+  </data>
+  <data name="Report.Summary.TotalPrice" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="Report.Summary.TotalPV" xml:space="preserve">
+    <value>Total PV</value>
+  </data>
+  <data name="Report.Warehouse.Unauthorized" xml:space="preserve">
+    <value>You do not have authority to access the WH report.</value>
+  </data>
+  <data name="Select.RequireOption" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Submitted" xml:space="preserve">
+    <value>Your request is submited.</value>
+  </data>
+  <data name="UISelect.All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="UISelect.InputFilterDepartment" xml:space="preserve">
+    <value>Please select the deparment.</value>
+  </data>
+  <data name="UISelect.InputFilterLocation" xml:space="preserve">
+    <value>Please select the location.</value>
+  </data>
+  <data name="UISelect.InputFilterProduct" xml:space="preserve">
+    <value>Please select the SKU</value>
+  </data>
+  <data name="UISelect.InputFilterUserFullName" xml:space="preserve">
+    <value>Please key employee name</value>
+  </data>
+  <data name="UISelect.InputFilterUserName" xml:space="preserve">
+    <value>Please key employee ID</value>
+  </data>
+  <data name="UISelect.InputFilterVolume" xml:space="preserve">
+    <value>Please choose the quantity</value>
+  </data>
+  <data name="UISelect.Warning.BatchDateNotSelected" xml:space="preserve">
+    <value>Please select order period</value>
+  </data>
+  <data name="User.Add" xml:space="preserve">
+    <value>Add user</value>
+  </data>
+  <data name="User.AddNew" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="User.CannotDeleteOnlyIT" xml:space="preserve">
+    <value>Cannot delete this user? System requires at least 1 IT user.</value>
+  </data>
+  <data name="User.ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="User.ChangePassword.Success" xml:space="preserve">
+    <value>Change password successfully</value>
+  </data>
+  <data name="User.ConfirmDelete" xml:space="preserve">
+    <value>Are you sure of cancel the user?</value>
+  </data>
+  <data name="User.ConfirmResetPwd" xml:space="preserve">
+    <value>Are you sure of resetting password? Password will be the same with username after reset</value>
+  </data>
+  <data name="User.Create" xml:space="preserve">
+    <value>Create user</value>
+  </data>
+  <data name="User.Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="User.Delete.Success" xml:space="preserve">
+    <value>Delete Successfully</value>
+  </data>
+  <data name="User.Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="User.Edit" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="User.EmployeeId" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="User.EmployeeName" xml:space="preserve">
+    <value>Employee Name</value>
+  </data>
+  <data name="User.ErrorToAddExistedUser" xml:space="preserve">
+    <value>User existed</value>
+  </data>
+  <data name="User.ErrorToDeleteUser" xml:space="preserve">
+    <value>ErrorToDeleteUser! Please contact admin</value>
+  </data>
+  <data name="User.ErrorToEditUser" xml:space="preserve">
+    <value>ErrorToEditUser! Please contact admin</value>
+  </data>
+  <data name="User.Excel" xml:space="preserve">
+    <value>Export excel file</value>
+  </data>
+  <data name="User.FullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="User.Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="User.Name" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="User.NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="User.OldPassword" xml:space="preserve">
+    <value>Old password</value>
+  </data>
+  <data name="User.ResetPwd" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="User.ResetPwd.Success" xml:space="preserve">
+    <value>Reset password successfully</value>
+  </data>
+  <data name="User.Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="User.SuccessToDeleteUser" xml:space="preserve">
+    <value>Delete Successfully</value>
+  </data>
+  <data name="User.SuccessToEditUser" xml:space="preserve">
+    <value>Update sucessfully</value>
+  </data>
+  <data name="User.TypeToSearchEmployeeId" xml:space="preserve">
+    <value>Type to search employee</value>
+  </data>
+  <data name="User.Update.Success" xml:space="preserve">
+    <value>Update sucessfully</value>
+  </data>
+  <data name="User.UserName" xml:space="preserve">
+    <value>Employee ID</value>
+  </data>
+  <data name="User.Validation.NotSameNewPassword" xml:space="preserve">
+    <value>Password not match</value>
+  </data>
+  <data name="User.Validation.PasswordMin" xml:space="preserve">
+    <value>Length of password required {0} characteristic</value>
+  </data>
+  <data name="User.Validation.SameOldPassword" xml:space="preserve">
+    <value>The same with old password</value>
+  </data>
+  <data name="User.Validation.UserNameExisted" xml:space="preserve">
+    <value>User name existed</value>
+  </data>
+  <data name="User.Validation.WrongOldPassword" xml:space="preserve">
+    <value>Wrong old password</value>
+  </data>
+  <data name="User.VerifyNewPassword" xml:space="preserve">
+    <value>Verify new password</value>
+  </data>
+  <data name="User.Warehouse" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="Users.Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Users.Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Users.UserName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="OrderWarehouse.PrintOrderPreview" xml:space="preserve">
+    <value>Print preview order</value>
+  </data>
+  <data name="Order.Validation.OrderInSessionExist" xml:space="preserve">
+    <value>Your order has already been existed in current order batch, cannot a new one.</value>
+  </data>
+</root>

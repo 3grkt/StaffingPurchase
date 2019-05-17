@@ -1,0 +1,143 @@
+﻿
+<ul class="nav" id="side-menu">
+	<li>
+		<a href="#/"><i class="glyphicon glyphicon-home"></i>&nbsp;{{'Menu.Home'|translate}}</a>
+	</li>
+	<li>
+		<a href="javascript:;"><i class="fa fa-briefcase"></i>&nbsp;{{'Menu.Orders'|translate}}</a>
+		<ul class="nav nav-second-level">
+			@if (Html.HasPermission(UserPermission.SubmitOrder))
+			{
+				<li>
+					<a href="#/order"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.PlaceOrder'|translate}}</a>
+				</li>
+			}
+			@if (Html.HasPermission(UserPermission.ViewOrderHistory))
+			{
+				<li>
+					<a href="#/order-history"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.OrderHistory'|translate}}</a>
+				</li>
+			}
+			@if (Html.HasPermission(UserPermission.UpdateOrder))
+			{
+				<li>
+					<a href="#/order-update"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.OrderUpdate'|translate}}</a>
+				</li>
+			}
+			@if (Html.HasPermission(UserPermission.ApproveOrder))
+			{
+				<li>
+					<a href="#/order-approval"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.OrderApproval'|translate}}</a>
+				</li>
+			}
+			@if (Html.HasPermission(UserPermission.PackOrder))
+			{
+				<li>
+					<a href="#/order-warehouse"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.OrderWarehouse'|translate}}</a>
+				</li>
+			}
+			@if (Html.HasPermission(UserPermission.ViewPvLog))
+			{
+				<li>
+					<a href="#/pv-log"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.ViewPvLog'|translate}}</a>
+				</li>
+			}
+            @if (Html.HasPermission(UserPermission.ReportAllOrders))
+            {
+                <li>
+                    <a href="javascript:;"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.AdminReport'|translate}}</a>
+                    <ul class="nav nav-third-level">
+                        <li>
+                            <a href="#/order/admin-report/internal-requisition-form"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.AdminReport.InternalRequisitionForm'|translate}}</a>
+                            <a href="#/order/admin-report/order-by-individual-pv"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.AdminReport.SummaryOrderByIndividualPV'|translate}}</a>
+                            <a href="#/order/admin-report/summary-discount-product"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.AdminReport.SummaryDiscountProduct'|translate}}</a>
+                            <a href="#/order/admin-report/order-by-individual-discount"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.AdminReport.SummaryOrderByIndividualDiscount'|translate}}</a>
+                        </li>
+                    </ul>
+                </li>
+            }
+            <!--@if (Html.HasPermission(UserPermission.ReportPackagedOrders))
+            {
+                <li>
+                    <a href="#/order-warehouse-report"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.WarehouseReport'|translate}}</a>
+                </li>
+            }-->
+		</ul>
+	</li>
+
+	@if (Html.HasPermission(UserPermission.CreateAward, UserPermission.UploadAwardList))
+	{
+		<li>
+			<a href="javascript:;"><i class="fa fa-trophy"></i>&nbsp;{{'Menu.Awards'|translate}}</a>
+			<ul class="nav nav-second-level">
+				@if (Html.HasPermission(UserPermission.CreateAward))
+				{
+					<li>
+						<a href="#/create-award"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.CreateAward'|translate}}</a>
+					</li>
+				}
+				@if (Html.HasPermission(UserPermission.UploadAwardList))
+				{
+					<li>
+						<a href="#/upload-award"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.UploadAwardList'|translate}}</a>
+					</li>
+				}
+			</ul>
+		</li>
+	}
+
+	@if(Html.HasPermission(UserPermission.MaintainUser, UserPermission.MaintainLevelGroup, UserPermission.MaintainProductList, UserPermission.MaintainPolicy)) {
+		<li>
+			<a href="javascript:;"><i class="fa fa-gear"></i>&nbsp;{{'Menu.Admin'|translate}}</a>
+			<ul class="nav nav-second-level">
+				@if (Html.HasPermission(UserPermission.MaintainUser))
+				{
+					<li>
+						<a href="#/user"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.User'|translate}}</a>
+					</li>
+				}
+				@if (Html.HasPermission(UserPermission.MaintainLevelGroup))
+				{
+					<li>
+						<a href="#/levelgroup"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.LevelGroup'|translate}}</a>
+					</li>
+				}
+				@if (Html.HasPermission(UserPermission.MaintainProductList))
+				{
+					<li>
+						<a href="#/upload-product"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.UploadProductList'|translate}}</a>
+					</li>
+					<li>
+						<a href="#/product-list"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.MaintainProductList'|translate}}</a>
+					</li>
+				}
+				@if (Html.HasPermission(UserPermission.MaintainPolicy))
+				{
+					<li>
+						<a href="#/policy"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.MaintainPolicy'|translate}}</a>
+					</li>
+				}
+				@if (Html.HasPermission(UserPermission.ViewBatchjobLog))
+				{
+					<li>
+						<a href="#/batchjob-log"><i class="fa fa-angle-right"></i>&nbsp;{{'Menu.ViewBatchJobLog'|translate}}</a>
+					</li>
+				}
+			</ul>
+		</li>
+	}
+    @if (Html.HasPermission(UserPermission.SubmitOrder))
+    {
+        <li>
+            <a href="javascript:;"><i class="fa fa-user"></i>&nbsp;{{'Menu.UserProfile' | translate}}</a>
+            <ul class="nav nav-second-level">
+                @if (Html.HasPermission(UserPermission.SubmitOrder))
+                {
+                    <li>
+                        <a href="#/user-change-password"><i class="fa fa-key"></i>&nbsp;{{'Menu.ChangePassword' | translate}}</a>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

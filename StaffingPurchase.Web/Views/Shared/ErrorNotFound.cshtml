@@ -1,0 +1,7 @@
+﻿@{
+	ViewBag.Title = T("Error.NotFound.PageTitle");
+
+	var message = @HttpContext.Current.Items["ErrorMessage"];
+}
+
+<h4>@(message ?? T("Error.NotFound.Description"))</h4>

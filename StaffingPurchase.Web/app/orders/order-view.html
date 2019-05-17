@@ -1,0 +1,57 @@
+﻿<fieldset class="fieldset">
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+							<label class="col-md-4 text-right" translate>Order.OrderedStart</label>
+							<div class="col-md-8">
+								{{ vm.viewingOrderInfo.FormattedSessionDate }}
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-md-4 text-right" translate>Order.Status</label>
+							<div class="col-md-8">
+								{{ vm.viewingOrderInfo.Status }}
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<label class="col-md-6 text-right" translate>Order.OrderDate</label>
+							<div class="col-md-6">
+								{{ vm.viewingOrderInfo.OrderDate }}
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-md-6 text-right" translate>Order.OrderType</label>
+							<div class="col-md-6">
+								{{ vm.viewingOrderInfo.OrderTypeDescription }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset">
+	<div ui-grid="vm.orderDetailGridOptions" class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.orderDetailGridOptions, true)"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<label class="col-md-12">
+					{{ "Order.Total" | translate }} :
+					<span ng-if="vm.viewingOrderInfo.OrderType == 'PV'">{{ vm.viewingOrderInfo.Value }} PV</span>
+					<span ng-if="vm.viewingOrderInfo.OrderType == 'Cash'">{{ vm.viewingOrderInfo.Value | currency:"VND ":0 }}</span>
+				</label>
+			</div>
+		</div>
+		<div class="col-md-6 text-right">
+			<button type="button" class="btn btn-primary" ng-click="vm.back()">
+				<i class="fa fa-arrow-circle-left"></i> {{ "Common.Back" | translate }}
+			</button>
+		</div>
+	</div>
+</fieldset>

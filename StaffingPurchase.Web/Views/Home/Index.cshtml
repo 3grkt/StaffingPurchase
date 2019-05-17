@@ -1,0 +1,32 @@
+﻿@{
+	ViewBag.Title = T("PageTitle.Home");
+	ViewBag.NgApp = "spApp";
+}
+
+@section Header {
+	@Styles.Render(
+		"~/static/css/angular"
+	)
+}
+
+@section Scripts{
+	@Scripts.Render(
+		"~/static/js/angular",
+		"~/static/app",
+		"~/static/app/shared",
+		"~/static/app/home",
+		"~/static/app/users",
+		"~/static/app/orders",
+		"~/static/app/levelgroups",
+		"~/static/app/products",
+		"~/static/app/awards",
+		"~/static/app/accounts",
+		"~/static/app/policies",
+		"~/static/app/pvlog",
+		"~/static/app/batchjobs",
+        "~/static/app/report",
+        "~/static/app/special-tasks"
+	)
+}
+
+<div ng-view></div>

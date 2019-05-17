@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+@{
+	string ngApp = ViewBag.NgApp as string;
+	string ngAppAttribute = string.Empty;
+	if (!string.IsNullOrEmpty(ngApp))
+	{
+		ngAppAttribute = string.Format("ng-app=\"{0}\"", ngApp);
+	}
+}
+<html lang="en" @Html.Raw(ngAppAttribute) ng-controller="pageCtrl">
+<head>
+	<meta charset="utf-8" />
+	<title>{{Page.title() | translate}} - @T("Common.AppFullName")</title>
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
+
+	@Styles.Render(
+		"~/static/css/lib",
+		"~/static/css/common"
+	)
+
+	<script type="text/javascript">
+		// Redirect all requests to home page
+		if (location.pathname !== '/' && location.pathname !== '/login') {
+			location.pathname = '/';
+		}
+	</script>
+
+	@RenderSection("Header", false)
+</head>
+<body>
+	<div class="wrapper">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                @*TODO: Toggle for testing purpose, enable permanently when go live*@
+				<a class="navbar-brand" href="@Url.Action("Index", "Home")">
+					<img src="@Url.Content("~/images/amway_logo.jpg")" />
+				</a>
+			</div>
+			<!-- /.navbar-header -->
+
+			<ul class="nav navbar-top-links navbar-right">
+				<li class="user-info">
+					@Html.Partial("_LoginPartial")
+				</li>
+			</ul>
+			<!-- /.navbar-top-links -->
+			@if (IsSectionDefined("LeftNavigation"))
+			{
+				@RenderSection("LeftNavigation")
+			}
+			else
+			{
+				<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+						@*<app-menu></app-menu>*@
+						@Html.Partial("_LeftNavigation")
+					</div>
+				</div>
+			}
+		</nav>
+
+
+		<!-- Page Content -->
+		<div id="page-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row page-header">
+							<div class="col-md-12 no-padding">
+								<h3 class="aw-header">{{Page.title() | translate}}</h3>
+							</div>
+						</div>
+					</div>
+					<!-- /.col-lg-12 -->
+				</div>
+				@RenderSection("featured", required: false)
+				<div class="row">
+					<div class="col-lg-12">
+						@Html.Partial("_Notification")
+						@RenderBody()
+					</div>
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container-fluid -->
+		</div>
+		<!-- /#page-wrapper -->
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container-fluid">
+				<p class="text-footer text-muted">
+					<span class="app-desc">@T("Common.AppDescription")</span>
+					<br />
+					@T("Common.Copyright")
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- /container -->
+
+	@Scripts.Render("~/static/js/lib")
+	@RenderSection("Scripts", required: false)
+
+	<!-- Revert style changes if issue found with cross browsers-->
+	<script>
+        // background-blend-mode is not compatible with IE
+        $(document).ready(function () {
+            if (typeof window.getComputedStyle(document.body).backgroundBlendMode == 'undefined') {
+                $('#footer').addClass('footer-ie-fix');
+            }
+        });
+	</script>
+</body>
+</html>

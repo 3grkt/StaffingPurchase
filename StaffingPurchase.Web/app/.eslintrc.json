@@ -1,0 +1,69 @@
+{
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "angular": true,
+        "jQuery": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "comma-dangle": [2, "never"],
+        "comma-style": [2, "last"],
+        "consistent-return": 2,
+        "curly": 2,
+        "eqeqeq": 2,
+        "no-alert": 2,
+        "no-array-constructor": 2,
+        "no-debugger": 2,
+        "no-empty": 2,
+        "no-eval": 2,
+        "no-extend-native": 2,
+        "no-extra-semi": 2,
+        "no-fallthrough": 2,
+        "no-loop-func": 2,
+        "no-redeclare": 2,
+        "no-self-compare": 2,
+        "no-sequences": 2,
+        "no-shadow": 2,
+        "no-undef": 2,
+        "no-unused-expressions": 2,
+        "no-unused-vars": [2, { "vars": "all", "args": "none" }],
+        "semi": 2,
+        // "strict": [2, "function"], // temporary comment to avoid 'Unnecessary "use strict" directive strict' message
+        "yoda": [2, "never"],
+        "array-bracket-spacing": [1, "never"],
+        "block-scoped-var": 1,
+        "camelcase": 1,
+        "comma-spacing": [1, { "before": false, "after": true }],
+        "dot-notation": 1,
+        "eol-last": 1,
+        "indent": [1, 4, { "SwitchCase": 1 }],
+        "key-spacing": [1, { "beforeColon": false, "afterColon": true }],
+        "keyword-spacing": 1,
+        "max-statements-per-line": [1, { "max": 1 }],
+        "no-console": 1,
+        "no-extra-boolean-cast": 1,
+        "no-irregular-whitespace": 1,
+        "no-mixed-spaces-and-tabs": 1,
+        "no-multi-spaces": 1,
+        "no-spaced-func": 1,
+        "no-underscore-dangle": 1,
+        "no-use-before-define": [1, { "functions": false }],
+        "no-void": 1,
+        "no-whitespace-before-property": 1,
+        "object-curly-spacing": [1, "always"],
+        "quotes": [1, "single"],
+        "semi-spacing": 1,
+        "space-before-blocks": [1, "always"],
+        "space-before-function-paren": [1, { "anonymous": "always", "named": "never" }],
+        "space-in-parens": [1, "never"],
+        "space-infix-ops": 1,
+        "unicode-bom": 1
+    }
+}

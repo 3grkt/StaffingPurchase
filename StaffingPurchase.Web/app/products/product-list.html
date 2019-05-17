@@ -1,0 +1,43 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.Sku</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" ng-model="vm.filter.sku"/>
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.Name</label>
+				<div class="col-md-3">
+					<input type="text" class="form-control" ng-model="vm.filter.name"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Product.Category</label>
+				<div class="col-md-3">
+					<select class="form-control" convert-to-number
+							ng-model="vm.filter.categoryId"
+							ng-options="key as value for (key, value) in vm.allCategories">
+						<option value=""></option>
+					</select>
+				</div>
+				<label class="col-md-2 col-md-offset-2" translate>Product.ActiveOnly</label>
+				<div class="col-md-3">
+					<input type="checkbox" ng-model="vm.filter.activeOnly" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<button type="submit" value="search" class="btn btn-primary" ng-click="vm.searchProducts()">
+					<i class="fa fa-search"></i> {{ "Common.Search" | translate }}
+				</button>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.searched">
+	<div ui-grid="vm.gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOptions)"></div>
+</fieldset>

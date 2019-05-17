@@ -1,0 +1,5 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<div>User: <input type="text" ng-model="vm.username" /></div>
+<div>Key: <input type="text" ng-model="vm.key"/>
+</div>
+<button type="button" ng-click="vm.run()">Run Jobs</button>

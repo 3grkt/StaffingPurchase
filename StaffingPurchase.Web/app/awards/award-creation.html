@@ -1,0 +1,25 @@
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ (vm.isEdit ? 'Award.Edit' : 'Award.Create') | translate }}</h4>
+</div>
+<div class="modal-body">
+	<div class="alert alert-danger" ng-if="vm.errorMessage">{{vm.errorMessage}}</div>
+	<form name="theForm" class="form-horizontal">
+		<div class="form-group">
+			<label for="username" class="col-md-4 control-label" translate>Award.Name</label>
+			<div class="col-md-8">
+				<input type="text" class="form-control" name="username" placeholder="{{'Award.Name' | translate}}" required ng-model="vm.award.name">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="fullName" class="col-md-4 control-label" translate>Award.PV</label>
+			<div class="col-md-8">
+				<input type="number" class="form-control" id="fullName" placeholder="{{'Award.PV' | translate}}" required ng-model="vm.award.pv">
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" ng-click="vm.cancel()" translate>Common.Cancel</button>
+	<button type="submit" class="btn btn-primary" ng-click="vm.save()" translate>Common.Save</button>
+</div>

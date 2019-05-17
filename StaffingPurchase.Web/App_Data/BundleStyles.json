@@ -1,0 +1,33 @@
+﻿[
+  {
+    "virtualPath": "~/static/css/lib",
+    "files": [
+      "~/Content/bootstrap.min.css",
+      "~/Content/metisMenu.css",
+      "~/Content/sb-admin-2.css",
+      "~/Content/font-awesome/font-awesome.min.css"
+    ]
+  },
+  {
+    "virtualPath": "~/static/css/common",
+    "files": [
+      "~/Content/site.css",
+      "~/Content/site.crossbrowser-fix.css"
+    ]
+  },
+  {
+    "virtualPath": "~/static/css/angular",
+    "files": [
+      "~/bower_components/angular-bootstrap/ui-bootstrap-csp.css",
+      "~/bower_components/angular-ui-grid/ui-grid.css",
+      "~/bower_components/ui-select/dist/select.css",
+      "~/bower_components/angular-ui-notification/dist/angular-ui-notification.css"
+    ]
+  },
+  {
+    "virtualPath": "~/static/css/email",
+    "files": [
+      "~/Content/EmailStyles/email.css"
+    ]
+  }
+]

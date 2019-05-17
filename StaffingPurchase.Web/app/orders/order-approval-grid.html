@@ -1,0 +1,57 @@
+<fieldset class="fieldset" ng-if="vm.gridData.totalItems">
+	<h4 class="order-approval-heading">{{ vm.gridTitle | translate }}</h4>
+
+	<div class="form-horizontal order-approval-form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Order.OrderSession</label>
+				<div class="col-md-3">
+					<span class="control-label">{{vm.gridData.orderSession}}</span>
+				</div>
+				<label class="col-md-2 col-md-offset-2" ng-if="vm.gridData.status" translate>Order.Status</label>
+				<div class="col-md-3" ng-if="vm.gridData.status">
+					<span class="control-label">{{vm.gridData.status}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="row" ng-if="vm.gridData.updatedDate">
+			<div class="form-group col-md-12">
+				<label class="col-md-2" translate>Common.UpdatedDate</label>
+				<div class="col-md-3">
+					<span class="control-label">{{vm.gridData.updatedDate}}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div ui-grid="vm.gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="vm.getGridHeight(vm.gridOptions)"></div>
+
+	<div class="text-right bottom-spacing">
+		{{ vm.sumLabel | translate }}: <b>{{ vm.totalValue }}</b>
+	</div>
+
+	<div class="row">
+		<div class="col-md-9">
+			<div class="form-group col-md-12">
+				<label class="col-md-2 control-label" ng-if="vm.canReject || vm.gridData.actionComment">{{'OrderBatch.RejectReason' | translate}}:</label>
+				<div class="col-md-10" ng-if="vm.canReject">
+					<input type="text" class="form-control" ng-model="vm.rejectReason" />
+				</div>
+				<div class="col-md-10" ng-if="!vm.canReject">
+					<span class="control-label" ng-if="vm.gridData.actionComment">{{vm.gridData.actionComment}}</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 text-right">
+			<button class="btn btn-primary" ng-if="vm.canReject " ng-click="vm.reject(vm.gridData.id, vm.orderType, vm.rejectReason)"
+				ng-disabled="!vm.rejectReason.length">
+				<i class="fa fa-times"></i>
+				{{ "OrderBatch.Reject" | translate }}
+			</button>
+			<button class="btn btn-primary" ng-click="vm.approve(vm.gridData.id, vm.orderType)" ng-disabled="!vm.canApprove">
+				<i class="fa fa-check"></i>
+				{{ "OrderBatch.Approve" | translate }}
+			</button>
+		</div>
+	</div>
+</fieldset>

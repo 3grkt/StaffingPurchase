@@ -1,0 +1,133 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary"  ng-click="vm.toPvMode()" ng-disabled="vm.isLookedOrder || !vm.isPriceMode">
+            {{ "Order.PVMode" | translate }} <i class="fa fa-check" aria-hidden="true" ng-if="!vm.isPriceMode"></i>
+        </button>
+
+        <button type="button" class="btn btn-primary"  ng-click="vm.toPriceMode()" ng-disabled="vm.isLookedOrder || vm.isPriceMode">
+            {{ "Order.PriceMode" | translate }} <i class="fa fa-check" aria-hidden="true" ng-if="vm.isPriceMode"></i>
+        </button>
+    </div>
+</div>
+<fieldset class="fieldset">
+    <uib-alert type="warning" ng-show="vm.isLookedOrder">{{"Order.Looked.Caption" | translate}}</uib-alert>
+    <form class="form-horizontal" role="form">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <label class="col-md-4" translate>Product.Category</label>
+                    <div class="col-md-8">
+                        <select id="productCategory" class="form-control" required convert-to-number
+                                ng-model="vm.selectedProductCategory"
+                                ng-options="key as value for (key , value) in vm.allProductCategories"
+                                ng-change="vm.onProductCategoryChanges()"
+                                ng-disabled="vm.isLookedOrder"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label translate>Product.Name</label>
+                    </div>
+                    <div class="col-md-9 text-right">
+                        <ui-select ng-model="vm.selectProduct" ng-disabled="vm.isLookedOrder">
+                            <ui-select-match placeholder="{{'UISelect.InputFilterProduct' | translate}}">{{$select.selected.Name}}</ui-select-match>
+                            <ui-select-choices repeat="item in vm.products | propsFilter: {Name: $select.search}">
+                                <div ng-bind-html="item.Name | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <b>{{"Product.SelectedName.Caption" | translate }} :</b>
+                        {{vm.selectProduct.Name}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div ng-show="vm.isPriceMode">
+                        <div class="col-md-12">
+                            <b>{{"Product.PriceDiscount.Caption" | translate}} :</b> <span ng-show="vm.selectProduct.Price != null">{{vm.selectProduct.Price * (1-vm.discount) | currency:"VND ":0}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12" ng-show="!vm.isPriceMode">
+                        <b>{{"Product.PV.Caption" | translate}} :</b> <span ng-show="vm.selectProduct.PV != null">{{vm.selectProduct.PV}}</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-12" ng-show="vm.isPriceMode">
+                        <b>
+                            {{"Order.Total.Caption" | translate}} :
+                        </b><span ng-show="vm.selectProduct.Price != null">{{vm.selectProduct.Price * (1 - vm.discount) * vm.selectedNum | currency:"VND ":0}} </span>
+                    </div>
+                    <div class="col-md-12" ng-show="!vm.isPriceMode">
+                        <b>
+                            {{"Order.Total.PV.Caption" | translate}} :
+                        </b>
+                        <span ng-show="vm.selectProduct.PV != null">{{(vm.selectProduct.PV * vm.selectedNum).toFixed(2)}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <label class="col-md-5 text-right" translate>Product.Quantity</label>
+                    <div class="col-md-7">
+                        <ui-select ng-model="vm.selectedNum" title="choose a person" ng-disabled="vm.isLookedOrder">
+                            <ui-select-match placeholder="{{'UISelect.InputFilterVolume'|translate}}">{{$select.selected}}</ui-select-match>
+                            <ui-select-choices repeat="item in vm.productNumChoices | filter: $select.search">
+                                <div ng-bind-html="item| highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="button" class="btn btn-primary" ng-click="vm.addOrderDetail()" ng-disabled="vm.isLookedOrder">
+                            <i class="fa fa-plus"></i> {{ "OrderDetail.AddOrderDetail" | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</fieldset>
+<fieldset class="fieldset">
+    <div ui-grid="vm.gridOptionsOrderDetail" class="grid grid-customized" style="height:250px"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div ng-show="vm.isPriceMode">
+                <b>{{"Order.TotalPriceWithDiscount" | translate}}: {{vm.orderTotal | currency:"VND ":0}}</b>
+            </div>
+            <div ng-show="!vm.isPriceMode">
+                <b>{{"Order.TotalPV" | translate}}: {{vm.orderPv}}</b>
+            </div>
+            <span ng-show="!vm.isPriceMode && !vm.isLookedOrder">
+                <b>{{ "Order.RemainPV" | translate }}: {{vm.remainPV}}</b>
+            </span>
+            <span ng-show="!vm.isPriceMode && vm.isLookedOrder">
+                <b>{{ "Order.RemainPV" | translate }}: {{vm.currentUserPV}}</b>
+            </span>
+        </div>
+        <div class="col-md-6 text-right">
+            <button type="button" class="btn btn-primary" ng-click="vm.removeSelectedOrderDetails()" ng-disabled="vm.isLookedOrder">
+                <i class="fa fa-ban"></i> {{ "OrderDetail.DeleteOrderDetail" | translate }}
+            </button>
+        </div>
+    </div>
+    <br />
+</fieldset>
+<br />
+<div class="row">
+    <div class="col-md-12 text-right">
+        <button type="button" class="btn btn-primary" ng-click="vm.cancelOrder()" ng-disabled="vm.isLookedOrder">
+            <i class="fa fa-ban"></i> {{ "Order.Cancel" | translate }}
+        </button>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+﻿Domain entities are generated from database using Entity Framework Power Tools

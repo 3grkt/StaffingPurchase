@@ -1,0 +1,77 @@
+﻿@using StaffingPurchase.Web.Framework.UI
+
+@functions{
+
+	private List<string> GetMessages(NotificationType notificationType)
+	{
+		var messages = new List<string>();
+		if (TempData[string.Format("notifications.{0}", notificationType)] != null)
+		{
+			messages.AddRange(TempData[string.Format("notifications.{0}", notificationType)] as IList<string>);
+		}
+		if (ViewData[string.Format("notifications.{0}", notificationType)] != null)
+		{
+			messages.AddRange(ViewData[string.Format("notifications.{0}", notificationType)] as IList<string>);
+		}
+		return messages;
+	}
+
+}
+
+@{
+	var successMessages = GetMessages(NotificationType.Success);
+	var warningMessages = GetMessages(NotificationType.Warning);
+	var errorMessages = GetMessages(NotificationType.Error);
+
+	////success messages
+	//var successMessages = new List<string>();
+	//if (TempData[string.Format("notifications.{0}", NotificationType.Success)] != null)
+	//{
+	//    successMessages.AddRange(TempData[string.Format("notifications.{0}", NotificationType.Success)] as IList<string>);
+	//}
+	//if (ViewData[string.Format("notifications.{0}", NotificationType.Success)] != null)
+	//{
+	//    successMessages.AddRange(ViewData[string.Format("notifications.{0}", NotificationType.Success)] as IList<string>);
+	//}
+
+	////error messages
+	//var errorMessages = new List<string>();
+	//if (TempData[string.Format("notifications.{0}", NotificationType.Error)] != null)
+	//{
+	//    errorMessages.AddRange(TempData[string.Format("notifications.{0}", NotificationType.Error)] as IList<string>);
+	//}
+	//if (ViewData[string.Format("notifications.{0}", NotificationType.Error)] != null)
+	//{
+	//    errorMessages.AddRange(ViewData[string.Format("notifications.{0}", NotificationType.Error)] as IList<string>);
+	//}
+}
+
+@if (successMessages.Count > 0)
+{
+	<div class="alert alert-success" role="alert">
+		@foreach (var msg in successMessages)
+		{
+			<div>@msg</div>
+		}
+	</div>
+}
+
+@if (warningMessages.Count > 0)
+{
+	<div class="alert alert-warning" role="alert">
+		@foreach (var msg in warningMessages)
+		{
+			<div>@msg</div>
+		}
+	</div>
+}
+
+@if (errorMessages.Count > 0)
+{
+	<div class="alert alert-danger" role="alert">
+		@foreach (var msg in errorMessages)
+		{
+			<div>@msg</div>
+		}
+	</div>
+}

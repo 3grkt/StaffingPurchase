@@ -1,0 +1,25 @@
+﻿@{
+	ViewBag.Title = T("PageTitle.Login");
+	ViewBag.NgApp = "spApp-login";
+}
+
+@section Header {
+	@Styles.Render(
+		"~/static/css/angular"
+	)
+}
+
+@section Scripts{
+	@Scripts.Render(
+		"~/static/js/angular",
+		"~/static/app-login",
+		"~/static/app/shared",
+		"~/static/app/accounts"
+	)
+}
+
+@section LeftNavigation {
+	@* Leave this empty so menu won't be rendered *@
+}
+
+<div ng-view></div>

@@ -1,0 +1,116 @@
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form">
+		<div class="row form-group form-group-update">
+			<div class="col-md-6">
+				<div class="row">
+					<label class="col-md-3 control-label" translate>Location.Name</label>
+					<div class="col-md-8">
+						<span>{{vm.metadata.location}}</span>
+						<ui-select ng-model="vm.selectedLocation" ng-change="vm.getOrderUsers()">
+							<ui-select-match placeholder="{{'UISelect.InputFilterLocation' | translate}}">{{$select.selected.Value}}</ui-select-match>
+							<ui-select-choices repeat="item in vm.locations | filter: $select.search ">
+								<div ng-bind-html="item.Value | highlight: $select.search"></div>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+				</div><br />
+				<div class="row">
+					<label class="col-md-3 control-label" translate>OrderReport.SessionDate</label>
+					<div class="col-md-8">
+						<select id="orderBatchDate" class="form-control" required ng-model="vm.selectedBatchDate">
+							<option value="">{{"Select.RequireOption" | translate}}</option>
+							<option ng-repeat="date in vm.orderBatchDates" value="{{date.EndDate}}">{{date.StartDate | date: 'MM/yyyy'}} - {{date.EndDate | date: 'MM/yyyy'}}</option>
+						</select>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<label class="col-md-3 control-label">{{ "User.FullName" | translate}} / {{ "User.UserName" | translate}}</label>
+					<div class="col-md-8">
+						<ui-select ng-model="vm.selectedUser">
+							<ui-select-match placeholder="{{'UISelect.InputFilterUserFullName' | translate}}">{{$select.selected.FullName}}</ui-select-match>
+							<ui-select-choices repeat="item in vm.orderUsers | propsFilter: {UserName: $select.search, FullName: $select.search}">
+								<div ng-bind-html="item.FullName| highlight: $select.search"></div>
+								<small ng-bind-html="item.UserName| highlight: $select.search"></small>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<label class="col-md-3 control-label" translate>Order.Status</label>
+					<div class="col-md-8">
+						<select id="orderStatus" class="form-control" required ng-model="vm.selectedOrderStatus" ng-options="item.Value | translate for item in vm.orderStatuses"></select>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<label class="col-md-4 control-label" translate>Department.Name</label>
+					<div class="col-md-8">
+						<span>{{vm.metadata.department}}</span>
+						<ui-select ng-model="vm.selectedDepartment" ng-change="vm.getOrderUsers()">
+							<ui-select-match placeholder="{{ 'UISelect.InputFilterDepartment' | translate}}"><span>{{$select.selected.Value}}</span></ui-select-match>
+							<ui-select-choices allow-clear="true" repeat="item in vm.departments| filter: $select.search">
+								<div ng-bind-html="item.Value | highlight: $select.search"></div>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<label class="col-md-4 control-label" translate>Product.Category</label>
+					<div class="col-md-8">
+						<select id="productCategory" class="form-control" required convert-to-number ng-model="vm.selectedProductCategory" ng-options="key as value for (key , value) in vm.productCategories"
+								ng-change="vm.onProductCategoryChanges()" ng-disabled="vm.isLookedOrder"></select>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<label class="col-md-4 control-label">{{ "Product.Name" | translate }} / {{ "Product.Sku" | translate }}</label>
+					<div class="col-md-8 text-right">
+						<ui-select ng-model="vm.selectedProduct">
+							<ui-select-match placeholder="{{ 'UISelect.InputFilterProduct' | translate }}">{{$select.selected.Name}}</ui-select-match>
+							<ui-select-choices repeat="item in vm.products | propsFilter: {Name: $select.search, Sku: $select.search}">
+								<div ng-bind-html="item.Name | highlight: $select.search"></div>
+								<small ng-bind-html="item.Sku | highlight: $select.search"></small>
+							</ui-select-choices>
+						</ui-select>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12 text-right">
+						<button type="button" class="btn btn-primary" ng-click="vm.search()">
+							<i class="fa fa-search"></i> {{ "Report.Preview" | translate }}
+						</button>
+						<button type="button" class="btn btn-primary" ng-click="vm.export()">
+							<i class="fa fa-download"></i> {{ "Report.ExportExcel" | translate }}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset">
+	<div ui-grid="vm.gridOrderReport" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOrderReport)" class="grid grid-customized" style="height: 200px"></div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="col-md-5" translate>Report.Summary.TotalAmount</div>
+			<div class="col-md-7">{{vm.summaryTotalAmount}}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="col-md-5" translate>Report.Summary.TotalDiscountedPrice</div>
+			<div class="col-md-7">{{vm.summaryTotalDiscountedPrice | currency:"VND ":0 }}</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="col-md-5" translate>Report.Summary.TotalPrice</div>
+			<div class="col-md-7">{{vm.summaryTotalPrice | currency:"VND ":0 }}</div>
+		</div>
+	</div>
+</fieldset>

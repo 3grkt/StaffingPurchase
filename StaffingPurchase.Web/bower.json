@@ -1,0 +1,34 @@
+{
+  "name": "staffing-purchase",
+  "description": "staffing purchase app",
+  "main": "index.js",
+  "authors": [
+    "Tri Nguyen <nguyen190887@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.5.3",
+    "angular-route": "~1.5.3",
+    "angular-sanitize": "~1.5.3",
+    "angular-resource": "~1.5.3",
+    "angular-translate": "^2.11.0",
+    "angular-translate-loader-url": "^2.11.0",
+    "angular-bootstrap": "~1.2.5",
+    "angular-ui-grid": "~3.1.1",
+    "ui-select": "angular-ui-select#^0.19.6",
+    "file-saver": "^1.2.2",
+    "ng-file-upload": "~12.0.4",
+    "angular-ui-notification": "^0.2.0",
+    "angular-cookies": "^1.6.1"
+  }
+}

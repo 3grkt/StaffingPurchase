@@ -1,0 +1,113 @@
+<fieldset class="fieldset" ng-if="!vm.viewOrderDetails">
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<div class="row">
+								<label class="col-md-5" translate>Order.OrderedStart</label>
+								<div class="col-md-7">
+									<p class="input-group">
+										<input type="text" class="form-control" uib-datepicker-popup ng-model="vm.search.startDate" is-open="vm.datePopup.startOpened" datepicker-options="dateOptions" ng-required="false" close-text="Close" />
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-default" ng-click="vm.openStartDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<label class="col-md-5" translate>Order.Status</label>
+								<div class="col-md-7">
+									<select id="orderStatus" class="form-control" required
+											ng-model="vm.selectedOrderStatus"
+											ng-options="item.Value | translate for item in vm.allOrderStatus"></select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-12">
+							<div class="row">
+								<label class="col-md-4 col-md-offset-1 text-right" translate>Order.OrderedEnd</label>
+								<div class="col-md-7">
+									<p class="input-group">
+										<input type="text" class="form-control" uib-datepicker-popup ng-model="vm.search.endDate" is-open="vm.datePopup.endOpened" datepicker-options="dateOptions" ng-required="false" close-text="Close" />
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-default" ng-click="vm.openEndDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+										</span>
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<button type="submit" value="search" class="btn btn-primary" ng-click="vm.searchOrder()"><i class="fa fa-search"></i>{{ "Common.Search" | translate }}</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.viewOrderDetails">
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="row">
+							<label class="col-md-4 text-right" translate>Order.OrderedStart</label>
+							<div class="col-md-8">
+								{{ vm.viewingOrderInfo.FormattedSessionDate }}
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-md-4 text-right" translate>Order.Status</label>
+							<div class="col-md-8">
+								{{ vm.viewingOrderInfo.Status }}
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<label class="col-md-6 text-right" translate>Order.OrderDate</label>
+							<div class="col-md-6">
+								{{ vm.viewingOrderInfo.OrderDate }}
+							</div>
+						</div>
+						<div class="row">
+							<label class="col-md-6 text-right" translate>Order.OrderType</label>
+							<div class="col-md-6">
+								{{ vm.viewingOrderInfo.OrderType }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.searched && !vm.viewOrderDetails && vm.gridOptions.data.length > 0">
+	<div ui-grid="vm.gridOptions" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOptions)"></div>
+</fieldset>
+<fieldset class="fieldset" ng-if="vm.viewOrderDetails">
+	<div ui-grid="vm.orderDetailGridOptions" class="grid"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<label class="col-md-12">
+					{{ "Order.Total" | translate }} : 
+					<span ng-if="vm.viewingOrderInfo.OrderType == 'PV'">{{ vm.viewingOrderInfo.Value }} PV</span>
+					<span ng-if="vm.viewingOrderInfo.OrderType == 'Cash'">{{ vm.viewingOrderInfo.Value | currency:"VND ":0 }}</span>
+				</label>
+			</div>
+		</div>
+		<div class="col-md-6 text-right">
+			<button type="button" class="btn btn-primary" ng-show="vm.viewOrderDetails" ng-click="vm.back()">
+				<i class="fa fa-arrow-circle-left"></i> {{ "Common.Back" | translate }}
+			</button>
+		</div>
+	</div>
+</fieldset>

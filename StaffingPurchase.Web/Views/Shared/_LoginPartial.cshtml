@@ -1,0 +1,30 @@
+﻿@using StaffingPurchase.Core.Infrastructure;
+
+@if (Request.IsAuthenticated)
+{
+	var workContext = EngineContext.Current.Resolve<IWorkContext>();
+	if (!string.IsNullOrEmpty(workContext.User.FullName))
+	{
+		var languageDict = new Dictionary<string, string>
+		{
+			{ "vi", T("Common.Language.Vietnamese") },
+			{ "en", T("Common.Language.English") }
+		};
+		<text>
+			@RenderLanguageList(languageDict, workContext.WorkingCulture.TwoLetterISOLanguageName)
+			@T("Common.Hello"), @workContext.User.FullName
+			- <a class="logout-link" href="javascript:;" ng-click="logout()">Logout</a>
+		</text>
+	}
+}
+
+@helper RenderLanguageList(Dictionary<string, string> languageDict, string activeLocale)
+{
+	var languageHtml = string.Join(" | ",
+		languageDict.Keys.Select(key =>
+			string.Format("<a href='javascript:;' {1}>{0}</a>", 
+				languageDict[key],
+				key.Equals(activeLocale, StringComparison.OrdinalIgnoreCase) ? "class='active'" : string.Format("ng-click='setLanguage(\"{0}\")'", key))));
+	
+	<div class="user-language">@T("Common.Language"): @Html.Raw(languageHtml)</div>
+}

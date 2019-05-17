@@ -1,0 +1,117 @@
+﻿<fieldset class="fieldset">
+	<uib-alert type="warning" ng-show="vm.isLookedOrder">{{"Order.Looked.Caption" | translate}}</uib-alert>
+	<uib-alert type="{{vm.alertFindUserOrders.type}}" ng-show="vm.alertFindUserOrders.show" close="vm.alertFindUserOrders.close()">{{vm.alertFindUserOrders.mgs | translate}}</uib-alert>
+	<form class="form-horizontal" role="form">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="col-md-6">
+					<div class="row">
+						<label class="col-md-3" translate>Department.Name</label>
+						<div class="col-md-9">
+							<ui-select ng-model="vm.selectedDepartment" title="Chọn " ng-change="vm.searchOrderDetails()">
+								<ui-select-match placeholder="{{ 'UISelect.InputFilterDepartment' | translate}}"><span>{{$select.selected.Value}}</span></ui-select-match>
+								<ui-select-choices allow-clear="true" repeat="item in vm.departments | filter: $select.search">
+									<div ng-bind-html="item.Value | highlight: $select.search"></div>
+								</ui-select-choices>
+							</ui-select>
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<label class="col-md-12" translate>OrderWarehouse.Caution.AfterPackaging</label>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-5">
+					<div class="row">
+						<label class="col-md-5 text-right" translate>OrderBatch.Range</label>
+						<div class="col-md-7 text-right">
+							{{vm.batchStartDate | customDate}} - {{vm.batchEndDate | customDate}}
+						</div>
+					</div>
+					<br />
+					<div class="row">
+						<div class="col-md-12 text-right">
+							<button type="button" class="btn btn-primary" ng-click="vm.searchOrderDetails()">
+								<i class="fa fa-search" aria-hidden="true"></i> {{ "OrderDetail.FindOrderDetail" | translate }}
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<fieldset class="fieldset">
+	<div ui-grid="vm.gridPVOrders" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridPVOrders)"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-4" translate>Report.Summary.TotalAmount</div>
+				<div class="col-md-8">{{vm.pvSummary.summaryTotalAmount}}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4" translate>Report.Summary.TotalPV</div>
+				<div class="col-md-8">{{vm.pvSummary.summaryTotalPV}}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4" translate>Report.Summary.TotalPrice</div>
+				<div class="col-md-8">{{vm.pvSummary.summaryTotalPrice | currency:"VND ":0 }}</div>
+			</div>
+		</div>
+		<div class="col-md-6 text-right">
+			<!--<button type="button" class="btn btn-primary" ng-click="vm.printOrderPreview(OrderType.pv)" ng-if="!vm.isPVOrderPackaged" ng-disabled="vm.gridPVOrders.data.length === 0">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintOrderPreview" | translate }}
+			</button>-->
+			<button type="button" class="btn btn-primary" ng-click="vm.printOrder(OrderType.pv)" ng-if="vm.selectedDepartment.Key" ng-disabled="!vm.isPVOrderPackaged">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-disabled="vm.gridPVOrders.data.length === 0" ng-click="vm.openPackagePVOrderModal()"
+							ng-if="vm.selectedDepartment.Key">
+				<i class="fa fa-plus-square" aria-hidden="true"></i> {{ "OrderWarehouse.PackageOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-click="vm.printOrder(OrderType.pv)" ng-if="!vm.selectedDepartment.Key" ng-disabled="!vm.isPVOrderPackaged">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintAllOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-if="!vm.selectedDepartment.Key" ng-disabled="vm.gridPVOrders.data.length === 0" ng-click="vm.openPackagePVOrderModal()">
+					<i class="fa fa-plus-square" aria-hidden="true"></i> {{ "OrderWarehouse.PackageAllOrder" | translate }}
+			</button>
+		</div>
+	</div>
+</fieldset>
+<fieldset class="fieldset">
+	<div ui-grid="vm.gridDiscountOrders" ui-grid-pagination class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridDiscountOrders)"></div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="row">
+				<div class="col-md-5" translate>Report.Summary.TotalAmount</div>
+				<div class="col-md-7">{{vm.discountSummary.summaryTotalAmount}}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5" translate>Report.Summary.TotalDiscountedPrice</div>
+				<div class="col-md-7">{{vm.discountSummary.summaryTotalDiscountedPrice | currency:"VND ":0 }}</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5" translate>Report.Summary.TotalPrice</div>
+				<div class="col-md-7">{{vm.discountSummary.summaryTotalPrice | currency:"VND ":0 }}</div>
+			</div>
+		</div>
+		<div class="col-md-12 text-right">
+			<!--<button type="button" class="btn btn-primary" ng-click="vm.printOrderPreview(OrderType.cash)" ng-if="!vm.isDiscountOrderPackaged" ng-disabled="vm.gridDiscountOrders.data.length === 0">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintOrderPreview" | translate }}
+			</button>-->
+			<button type="button" class="btn btn-primary" ng-click="vm.printOrder(OrderType.cash)" ng-if="vm.selectedDepartment.Key" ng-disabled="!vm.isDiscountOrderPackaged">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-disabled="vm.gridDiscountOrders.data.length === 0" ng-click="vm.openPackageDiscountOrderModal()" ng-if="vm.selectedDepartment.Key">
+				<i class="fa fa-plus-square" aria-hidden="true"></i> {{ "OrderWarehouse.PackageOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-click="vm.printOrder(OrderType.cash)" ng-if="!vm.selectedDepartment.Key" ng-disabled="!vm.isDiscountOrderPackaged">
+				<i class="fa fa-print" aria-hidden="true"></i> {{ "OrderWarehouse.PrintAllOrder" | translate }}
+			</button>
+			<button type="button" class="btn btn-primary" ng-if="!vm.selectedDepartment.Key" ng-disabled="vm.gridDiscountOrders.data.length === 0" ng-click="vm.openPackageDiscountOrderModal()">
+				<i class="fa fa-plus-square" aria-hidden="true"></i> {{ "OrderWarehouse.PackageAllOrder" | translate }}
+			</button>
+		</div>
+	</div>
+</fieldset>

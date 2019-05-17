@@ -1,0 +1,43 @@
+﻿<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="vm.cancel()"><span aria-hidden="true">&times;</span></button>
+	<h4 class="modal-title">{{ "OrderPackage.Edit" | translate }}</h4>
+</div>
+<div class="modal-body">
+	<div class="alert alert-danger" ng-if="vm.errorMessage">{{ vm.errorMessage }}</div>
+	<form name="theForm" class="form-horizontal">
+		<div class="form-group" ng-if="vm.package.departmentId > 0">
+			<div class="col-md-10 col-md-offset-1">
+				<label>{{ "Department.Name" | translate}} : {{ vm.package.departmentName }}</label>
+				<br />
+				<div class="checkbox">
+					<label><input type="checkbox" ng-model="vm.package.isDeficient" value="">{{"OrderPackage.Caption.NotEnoughVolume" | translate}}</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group" ng-if="vm.package.departmentId > 0">
+			<div class="col-md-10 col-md-offset-1" ng-if="vm.package.isDeficient" >
+				<label for="comment">{{ "OrderPackage.Note" | translate }}</label>
+				<textarea class="form-control" rows="5" id="comment" ng-model="vm.package.note"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-10 col-md-offset-1">
+				<label>{{ "Order.Type" | translate }} : </label>
+				<label ng-if="vm.package.orderType === 0">{{"OrderType.Cash" | translate}}</label>
+				<label ng-if="vm.package.orderType === 1">{{"OrderType.PV" | translate}}</label>
+			</div>
+		</div>
+		<div class="form-group" ng-if="!vm.package.departmentId">
+			<div class="col-md-10 col-md-offset-1">
+				<p>
+					{{ "OrderPackage.PackageAll.Caution" | translate }}
+				</p>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-default" ng-click="vm.cancel()" translate>Common.Cancel</button>
+	<button type="submit" class="btn btn-primary" ng-if="vm.package.departmentId > 0" ng-click="vm.packageOrder()" translate>Common.Verify</button>
+	<button type="submit" class="btn btn-primary" ng-if="!vm.package.departmentId" ng-click="vm.packageAllOrder()" translate>Common.Verify</button>
+</div>

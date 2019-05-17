@@ -1,0 +1,28 @@
+# http://editorconfig.org
+#
+# Plugins to apply the settings in this file are available for Visual Studio
+# and Sublime Text.
+
+root = true
+
+[*]
+end_of_line = crlf
+insert_final_newline = true
+
+[*.{cshtml,html,aspx,ascx}]
+indent_size = 4
+indent_style = tab
+
+[*.cs]
+indent_size = 4
+indent_style = space
+
+[*.{scss,css}]
+charset = utf-8
+indent_size = 2
+indent_style = space
+
+[*.{js,json}]
+charset = utf-8
+indent_size = 4
+indent_style = space

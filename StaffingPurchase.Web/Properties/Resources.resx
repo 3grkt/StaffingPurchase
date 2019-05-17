@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common.All" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="Common.AppFullName" xml:space="preserve">
+    <value>Staffing Purchase</value>
+  </data>
+  <data name="Common.AppName" xml:space="preserve">
+    <value>Staffing Purchase</value>
+  </data>
+  <data name="Common.Begin" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Common.Copyright" xml:space="preserve">
+    <value>© 2016 - Bản quyền thuộc về Amway</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Common.Edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="Common.Hello" xml:space="preserve">
+    <value>Xin chào</value>
+  </data>
+  <data name="Common.Import" xml:space="preserve">
+    <value>Nhập vào</value>
+  </data>
+  <data name="Common.Message.NoRecordFound" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu.</value>
+  </data>
+  <data name="Common.Page" xml:space="preserve">
+    <value>Trang</value>
+  </data>
+  <data name="Common.Page.Display" xml:space="preserve">
+    <value>Hiển thị</value>
+  </data>
+  <data name="Common.Page.First" xml:space="preserve">
+    <value>Trang đầu</value>
+  </data>
+  <data name="Common.Page.FoundRecords" xml:space="preserve">
+    <value>{0} kết quả</value>
+  </data>
+  <data name="Common.Page.Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Common.Page.Go.Hint" xml:space="preserve">
+    <value>Chuyển trang</value>
+  </data>
+  <data name="Common.Page.Last" xml:space="preserve">
+    <value>Trang cuối</value>
+  </data>
+  <data name="Common.Page.Next" xml:space="preserve">
+    <value>Trang sau</value>
+  </data>
+  <data name="Common.Page.Previous" xml:space="preserve">
+    <value>Trang trước</value>
+  </data>
+  <data name="Common.Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Common.Search" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common.Validation.StringMaxLength" xml:space="preserve">
+    <value>{0} không được quá {1} ký tự.</value>
+  </data>
+  <data name="Error.Forbidden.Description" xml:space="preserve">
+    <value>Bạn không có quyền truy cập trang này!</value>
+  </data>
+  <data name="Error.Forbidden.PageTitle" xml:space="preserve">
+    <value>Không có quyền</value>
+  </data>
+  <data name="Error.NotFound.Description" xml:space="preserve">
+    <value>Trang web không tồn tại. Vui lòng thử lại đường dẫn khác!</value>
+  </data>
+  <data name="Error.NotFound.PageTitle" xml:space="preserve">
+    <value>Không tìm thấy</value>
+  </data>
+  <data name="Error.ServerError.Description" xml:space="preserve">
+    <value>Đã có lỗi xảy ra trong hệ thống. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Error.ServerError.PageTitle" xml:space="preserve">
+    <value>Lỗi hệ thống</value>
+  </data>
+  <data name="Error.DataException" xml:space="preserve">
+    <value>Đã có lỗi xảy ra. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Error.DataKeyConflict" xml:space="preserve">
+    <value>Không thể xóa vì dữ liệu đã được dùng trong hệ thống. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Menu.Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Menu.User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="PageTitle.Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Users.Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="User.Role" xml:space="preserve">
+    <value>Quyền</value>
+  </data>
+  <data name="Users.Title" xml:space="preserve">
+    <value>Chức vụ</value>
+  </data>
+  <data name="Users.UserName" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="Common.StartDate" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="Common.EndDate" xml:space="preserve">
+    <value>Ngày kết thúc</value>
+  </data>
+  <data name="Common.Excel" xml:space="preserve">
+    <value>Xuất ra Excel</value>
+  </data>
+  <data name="Common.AppDescription" xml:space="preserve">
+    <value>Staffing Purchase System</value>
+  </data>
+  <data name="PageTitle.User" xml:space="preserve">
+    <value>Danh sách user</value>
+  </data>
+  <data name="User.Add" xml:space="preserve">
+    <value>Thêm user</value>
+  </data>
+  <data name="User.AddNew" xml:space="preserve">
+    <value>Thêm mới</value>
+  </data>
+  <data name="User.ConfirmDelete" xml:space="preserve">
+    <value>Bạn có chắc muốn xóa User này không?</value>
+  </data>
+  <data name="User.Edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
+  <data name="User.ErrorToAddExistedUser" xml:space="preserve">
+    <value>User đã tồn tại.</value>
+  </data>
+  <data name="User.ErrorToDeleteUser" xml:space="preserve">
+    <value>Đã có lỗi khi xóa user. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="User.ErrorToEditUser" xml:space="preserve">
+    <value>Đã có lỗi khi cập nhật. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="User.Excel" xml:space="preserve">
+    <value>Xuất ra Excel</value>
+  </data>
+  <data name="User.FullName" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="User.Name" xml:space="preserve">
+    <value>User Id</value>
+  </data>
+  <data name="User.SuccessToDeleteUser" xml:space="preserve">
+    <value>Xóa user thành công</value>
+  </data>
+  <data name="User.SuccessToEditUser" xml:space="preserve">
+    <value>Cập nhật user thành công</value>
+  </data>
+  <data name="User.Warehouse" xml:space="preserve">
+    <value>Kho</value>
+  </data>
+  <data name="User.EmployeeId" xml:space="preserve">
+    <value>Mã nhân viên</value>
+  </data>
+  <data name="User.EmployeeName" xml:space="preserve">
+    <value>Tên nhân viên</value>
+  </data>
+  <data name="User.TypeToSearchEmployeeId" xml:space="preserve">
+    <value>Nhập để tìm mã NV</value>
+  </data>
+  <data name="Menu.OrderApproval" xml:space="preserve">
+    <value>Đơn hàng chờ duyệt</value>
+  </data>
+  <data name="Menu.OrderHistory" xml:space="preserve">
+    <value>Xem lịch sử đơn hàng</value>
+  </data>
+  <data name="Menu.Orders" xml:space="preserve">
+    <value>Đơn hàng</value>
+  </data>
+  <data name="Menu.OrderUpdate" xml:space="preserve">
+    <value>Thay đổi đơn hàng</value>
+  </data>
+  <data name="Menu.OrderWarehouse" xml:space="preserve">
+    <value>Đơn hàng chờ đóng gói</value>
+  </data>
+  <data name="Menu.PlaceOrder" xml:space="preserve">
+    <value>Đặt hàng</value>
+  </data>
+  <data name="Order.OrderedEnd" xml:space="preserve">
+    <value>đến</value>
+  </data>
+  <data name="Order.OrderedStart" xml:space="preserve">
+    <value>Đặt hàng từ</value>
+  </data>
+  <data name="Order.OrderDate" xml:space="preserve">
+    <value>Ngày đặt</value>
+  </data>
+  <data name="Order.OrderSession" xml:space="preserve">
+    <value>Đợt đặt hàng</value>
+  </data>
+  <data name="Order.OrderType" xml:space="preserve">
+    <value>Loại đơn hàng</value>
+  </data>
+  <data name="Order.Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Order.Value" xml:space="preserve">
+    <value>Giá trị</value>
+  </data>
+  <data name="Menu.Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="User.Create" xml:space="preserve">
+    <value>Tạo user</value>
+  </data>
+  <data name="Common.Validation.Required" xml:space="preserve">
+    <value>Vui lòng nhập đầy đủ thông tin!</value>
+  </data>
+  <data name="Common.DataNotFound" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu!</value>
+  </data>
+  <data name="Common.Ok" xml:space="preserve">
+    <value>Đồng ý</value>
+  </data>
+  <data name="Modal.Confirm" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="LevelGroup.Name" xml:space="preserve">
+    <value>Tên Group</value>
+  </data>
+  <data name="LevelGroup.PV" xml:space="preserve">
+    <value>PV</value>
+  </data>
+  <data name="LevelGroup.Create" xml:space="preserve">
+    <value>Tạo group</value>
+  </data>
+  <data name="Menu.LevelGroup" xml:space="preserve">
+    <value>Level/Group</value>
+  </data>
+  <data name="LevelGroup.ConfirmDelete" xml:space="preserve">
+    <value>Bạn có chắc muốn xóa Group này không?</value>
+  </data>
+  <data name="LevelGroup.Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="LevelGroup.Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Level.Name" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="Level.Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Level.ConfirmCancelUpdateAll" xml:space="preserve">
+    <value>Bạn có chắc muốn hủy thay đổi</value>
+  </data>
+  <data name="Level.ConfirmUpdateAll" xml:space="preserve">
+    <value>Bạn có chắc muốn cập nhập thay đổi</value>
+  </data>
+  <data name="Level.UpdateAllSuccess" xml:space="preserve">
+    <value>Cập nhập Group thành công</value>
+  </data>
+  <data name="LevelGroup.AddSuccess" xml:space="preserve">
+    <value>Thêm Group thành công</value>
+  </data>
+  <data name="LevelGroup.ConfirmAdd" xml:space="preserve">
+    <value>Bạn có chắc muốn thêm Group</value>
+  </data>
+  <data name="LevelGroup.ConfirmCancelUpdateAll" xml:space="preserve">
+    <value>Bạn có chắc muốn hủy thay đổi</value>
+  </data>
+  <data name="LevelGroup.ConfirmUpdateAll" xml:space="preserve">
+    <value>Bạn có chắc muốn cập nhập thay đổi</value>
+  </data>
+  <data name="LevelGroup.DeleteSuccess" xml:space="preserve">
+    <value>Xóa Group thành công!</value>
+  </data>
+  <data name="LevelGroup.UpdateAllSuccess" xml:space="preserve">
+    <value>Cập nhập điểm PV thành công!</value>
+  </data>
+  <data name="LevelGroup.DeleteExisted" xml:space="preserve">
+    <value>Không thể xóa do tồn tại Level sử dụng Group này</value>
+  </data>
+  <data name="Common.Department" xml:space="preserve">
+    <value>Bộ phận</value>
+  </data>
+  <data name="Common.Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Common.UpdatedDate" xml:space="preserve">
+    <value>Ngày cập nhật</value>
+  </data>
+  <data name="OrderBatch.Approve" xml:space="preserve">
+    <value>Duyệt</value>
+  </data>
+  <data name="OrderBatch.OrderListPV" xml:space="preserve">
+    <value>Danh sách đơn hàng PV</value>
+  </data>
+  <data name="OrderBatch.OrderListCast" xml:space="preserve">
+    <value>Danh sách đơn hàng Giảm giá 21%</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.Approved" xml:space="preserve">
+    <value>Đã duyệt</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.HrAdminPending" xml:space="preserve">
+    <value>Chờ HR Admin duyệt</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.HrManagerPending" xml:space="preserve">
+    <value>Chờ HR Manager duyệt</value>
+  </data>
+  <data name="Enums.OrderBatchStatus.RejectedByHrManager" xml:space="preserve">
+    <value>Bị từ chối</value>
+  </data>
+  <data name="Enums.OrderStatus.Approved" xml:space="preserve">
+    <value>Đã duyệt</value>
+  </data>
+  <data name="Enums.OrderStatus.Draft" xml:space="preserve">
+    <value>Nháp</value>
+  </data>
+  <data name="Enums.OrderStatus.Packaged" xml:space="preserve">
+    <value>Đã đóng gói</value>
+  </data>
+  <data name="Enums.OrderStatus.Submitted" xml:space="preserve">
+    <value>Chờ duyệt</value>
+  </data>
+  <data name="Order.Total.Caption" xml:space="preserve">
+    <value>Thành tiền</value>
+  </data>
+  <data name="Product.Name" xml:space="preserve">
+    <value>Tên sản phẩm</value>
+  </data>
+  <data name="Product.NameEn" xml:space="preserve">
+    <value>Tên tiếng Anh</value>
+  </data>
+  <data name="Product.PriceDiscount.Caption" xml:space="preserve">
+    <value>Đơn giá (-21%)</value>
+  </data>
+  <data name="Product.Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="Product.NetWeight" xml:space="preserve">
+    <value>Khối lượng tịnh</value>
+  </data>
+  <data name="Order.UserName" xml:space="preserve">
+    <value>Người đặt hàng</value>
+  </data>
+  <data name="Enums.OrderType.cash" xml:space="preserve">
+    <value>21%</value>
+  </data>
+  <data name="Enums.OrderType.PV" xml:space="preserve">
+    <value>PV</value>
+  </data>
+  <data name="OrderBatch.ConfirmApprove" xml:space="preserve">
+    <value>Bạn có chắc muốn duyệt những đơn hàng này?</value>
+  </data>
+  <data name="OrderBatch.ConfirmReject" xml:space="preserve">
+    <value>Bạn có chắc muốn từ chối những đơn hàng này?</value>
+  </data>
+  <data name="OrderBatch.NoData" xml:space="preserve">
+    <value>Không tìm thấy đơn hàng cho location và bộ phận đã chọn!</value>
+  </data>
+  <data name="OrderBatch.FailedToUpdate" xml:space="preserve">
+    <value>Đã có lỗi khi cập nhật đơn hàng. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="OrderBatch.Reject" xml:space="preserve">
+    <value>Từ chối</value>
+  </data>
+  <data name="OrderBatch.RejectReason" xml:space="preserve">
+    <value>Lý do</value>
+  </data>
+  <data name="OrderBatch.SuccessToApprove" xml:space="preserve">
+    <value>Đơn hàng đã được duyệt!</value>
+  </data>
+  <data name="OrderBatch.SuccessToReject" xml:space="preserve">
+    <value>Đơn hàng đã bị từ chối!</value>
+  </data>
+  <data name="Order.Submit" xml:space="preserve">
+    <value>Đặt hàng</value>
+  </data>
+  <data name="Order.Cancel" xml:space="preserve">
+    <value>Hủy tất cả</value>
+  </data>
+  <data name="Order.CreateUpdate" xml:space="preserve">
+    <value>Thêm/Lưu</value>
+  </data>
+  <data name="Order.Remove" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Order.RemoveAll" xml:space="preserve">
+    <value>Hủy đơn hàng</value>
+  </data>
+  <data name="Product.Id" xml:space="preserve">
+    <value>Mã sản phẩm</value>
+  </data>
+  <data name="Product.TotalPrice" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="Order.TotalPrice" xml:space="preserve">
+    <value>Tổng tiền</value>
+  </data>
+  <data name="Order.CancelSuccess" xml:space="preserve">
+    <value>Hủy đơn hàng thành công</value>
+  </data>
+  <data name="Order.Confirm.DeleteOrderDetail" xml:space="preserve">
+    <value>Xác nhận xóa</value>
+  </data>
+  <data name="Order.PriceMode" xml:space="preserve">
+    <value>Đặt hàng bằng tiền mặt</value>
+  </data>
+  <data name="Order.PVMode" xml:space="preserve">
+    <value>Đặt hàng bằng điểm PV</value>
+  </data>
+  <data name="Order.RemainPV" xml:space="preserve">
+    <value>Số điểm PV hiện tại</value>
+  </data>
+  <data name="Order.SubmitSuccess" xml:space="preserve">
+    <value>Đơn hàng đã được lưu</value>
+  </data>
+  <data name="Order.Total.PV.Caption" xml:space="preserve">
+    <value>Tổng PV</value>
+  </data>
+  <data name="Order.TotalPV" xml:space="preserve">
+    <value>Tổng</value>
+  </data>
+  <data name="OrderDetail.AddOrderDetail" xml:space="preserve">
+    <value>Thêm/Lưu</value>
+  </data>
+  <data name="OrderDetail.AddSuccess" xml:space="preserve">
+    <value>Thêm/Lưu sản phẩm thành công</value>
+  </data>
+  <data name="OrderDetail.Cancel.AddOrderDetail" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="OrderDetail.DeleteOrderDetail" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="OrderDetail.DeleteSuccess" xml:space="preserve">
+    <value>Xóa thành công</value>
+  </data>
+  <data name="OrderDetail.Validation.NotEnoughPV" xml:space="preserve">
+    <value>Điểm PV không đủ!</value>
+  </data>
+  <data name="OrderDetail.Validation.UnselectProduct" xml:space="preserve">
+    <value>Chưa chọn sản phẩm</value>
+  </data>
+  <data name="Product.Price" xml:space="preserve">
+    <value>Giá</value>
+  </data>
+  <data name="Product.Price.Caption" xml:space="preserve">
+    <value>Đơn giá</value>
+  </data>
+  <data name="Product.PV" xml:space="preserve">
+    <value>PV</value>
+  </data>
+  <data name="Product.PV.Caption" xml:space="preserve">
+    <value>PV/Sản phẩm</value>
+  </data>
+  <data name="Order.Confirm.DeleteOrder" xml:space="preserve">
+    <value>Xác nhận hủy đơn hàng</value>
+  </data>
+  <data name="Order.Confirm.SubmitOrder" xml:space="preserve">
+    <value>Xác nhận đăng ký đặt hàng</value>
+  </data>
+  <data name="Order.Looked.Caption" xml:space="preserve">
+    <value>Bạn không thể đặt hàng trong thời điểm này</value>
+  </data>
+  <data name="OrderDetail.Validation.OutOfOverPrice" xml:space="preserve">
+    <value>Vượt quá số lượng đặt hàng cho phép mỗi năm với sản phẩm trên {0}</value>
+  </data>
+  <data name="Order.Submitted.Caption" xml:space="preserve">
+    <value>Đơn hàng này đã được đặt</value>
+  </data>
+  <data name="Department.Name" xml:space="preserve">
+    <value>Bộ phận</value>
+  </data>
+  <data name="Location.Name" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="OrderDetail.FindOrderDetail" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="OrderDetail.Volume" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="OrderUpdate.Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="OrderUpdate.Confirm.SaveChange" xml:space="preserve">
+    <value>Lưu thay đổi trên đơn hàng?</value>
+  </data>
+  <data name="OrderUpdate.Edit" xml:space="preserve">
+    <value>Thay đổi sản phẩm</value>
+  </data>
+  <data name="OrderUpdate.OrderFound" xml:space="preserve">
+    <value>Tìm thấy kết quả</value>
+  </data>
+  <data name="OrderUpdate.OrderNotFound" xml:space="preserve">
+    <value>Không tìm thấy đơn hàng nào</value>
+  </data>
+  <data name="OrderUpdate.SaveSuccess" xml:space="preserve">
+    <value>Lưu đơn hàng thành công</value>
+  </data>
+  <data name="OrderUpdate.Submit" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="OrderUpdate.Validation.ExistOverPrice" xml:space="preserve">
+    <value>Bạn không thể mua quá {0} sản phẩm trên {1} trong 1 năm</value>
+  </data>
+  <data name="OrderBatch.Range" xml:space="preserve">
+    <value>Đợt đặt hàng</value>
+  </data>
+  <data name="OrderUpdate.Validation.NotEnoughPV" xml:space="preserve">
+    <value>Không đủ PV</value>
+  </data>
+  <data name="OrderUpdate.Validation.NoChange" xml:space="preserve">
+    <value>Không có thay đổi!</value>
+  </data>
+  <data name="Order.Validation.IsLocked" xml:space="preserve">
+    <value>Không thể thao tác với đơn hàng vào lúc này</value>
+  </data>
+  <data name="Order.Validation.IsSubmitted" xml:space="preserve">
+    <value>Đơn hàng này đã được submit</value>
+  </data>
+  <data name="Account.FailedToLogin" xml:space="preserve">
+    <value>Tên đăng nhập hoặc mật khẩu không chính xác. Vui lòng thử lại!</value>
+  </data>
+  <data name="PageTitle.Login" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="Account.Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="Account.UserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="Common.Verify" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="OrderPackage.Caption.NotEnoughVolume" xml:space="preserve">
+    <value>Sản phẩm không đủ số lượng?</value>
+  </data>
+  <data name="OrderPackage.Edit" xml:space="preserve">
+    <value>Xác nhận đóng gói</value>
+  </data>
+  <data name="OrderPackage.Note" xml:space="preserve">
+    <value>Ghi chú (Xin vui lòng liệt kê kĩ những đơn hàng có vấn đề)</value>
+  </data>
+  <data name="OrderPackage.Validation.AlreadyPackaged" xml:space="preserve">
+    <value>Đơn hàng đã được đóng gói!</value>
+  </data>
+  <data name="OrderPackage.Verify" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="OrderPackage.PVOrderNotFound" xml:space="preserve">
+    <value>Không tìm thấy đơn hàng thanh toán bằng PV do không tồn tại hay đã được đóng gói!</value>
+  </data>
+  <data name="OrderWarehouse.PackageOrder" xml:space="preserve">
+    <value>Đóng gói</value>
+  </data>
+  <data name="OrderWarehouse.PackageSuccess" xml:space="preserve">
+    <value>Đóng gói thành công!</value>
+  </data>
+  <data name="OrderWarehouse.PrintOrder" xml:space="preserve">
+    <value>In đơn hàng</value>
+  </data>
+  <data name="Common.Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="OrderWarehouse.Validation.UnselectDepartment" xml:space="preserve">
+    <value>Chưa chọn Department, xin hãy chọn Department cần in và nhấn tìm kiếm!</value>
+  </data>
+  <data name="PVLog.Description.PayOrderPV" xml:space="preserve">
+    <value>Thanh toán đơn đặt hàng bằng PV</value>
+  </data>
+  <data name="PVLog.Description.UserAwarded" xml:space="preserve">
+    <value>Tặng điểm thắng giải "{0}"</value>
+  </data>
+  <data name="PVLog.Description.AwardedOnBirthday" xml:space="preserve">
+    <value>Tặng PV cho sinh nhật</value>
+  </data>
+  <data name="PVLog.Description.UpdatedByAdmin" xml:space="preserve">
+    <value>Admin thay đổi đơn hàng</value>
+  </data>
+  <data name="PVLog.Description.MonthlyRewarded" xml:space="preserve">
+    <value>Tặng PV hàng tháng</value>
+  </data>
+  <data name="Menu.UploadProductList" xml:space="preserve">
+    <value>Upload danh sách sản phẩm</value>
+  </data>
+  <data name="Menu.MaintainProductList" xml:space="preserve">
+    <value>Cập nhật sản phẩm</value>
+  </data>
+  <data name="Menu.UploadAwardList" xml:space="preserve">
+    <value>Upload danh sách thắng giải</value>
+  </data>
+  <data name="Menu.CreateAward" xml:space="preserve">
+    <value>Tạo giải thưởng</value>
+  </data>
+  <data name="Menu.Awards" xml:space="preserve">
+    <value>Giải thưởng</value>
+  </data>
+  <data name="PageTitle.UploadProductList" xml:space="preserve">
+    <value>Upload danh sách sản phẩm</value>
+  </data>
+  <data name="PageTitle.MaintainProductList" xml:space="preserve">
+    <value>Cập nhật danh sách sản phẩm</value>
+  </data>
+  <data name="PageTitle.ProductDetail" xml:space="preserve">
+    <value>Chi tiết sản phẩm</value>
+  </data>
+  <data name="PageTitle.UploadAwardList" xml:space="preserve">
+    <value>Upload danh sách thắng giải</value>
+  </data>
+  <data name="PageTitle.CreateAward" xml:space="preserve">
+    <value>Tạo giải thưởng</value>
+  </data>
+  <data name="PageTitle.OrderWarehouse" xml:space="preserve">
+    <value>Đơn hàng chuyển đến Warehouse</value>
+  </data>
+  <data name="PageTitle.MaintainPolicy" xml:space="preserve">
+    <value>Cấu hình Policy</value>
+  </data>
+  <data name="PageTitle.ViewOrder" xml:space="preserve">
+    <value>Xem đơn hàng</value>
+  </data>
+  <data name="Common.SelectFile" xml:space="preserve">
+    <value>Chọn file</value>
+  </data>
+  <data name="Common.SheetName" xml:space="preserve">
+    <value>Tên Sheet</value>
+  </data>
+  <data name="Common.SheetName.Tooltip" xml:space="preserve">
+    <value>Để trống để chọn sheet đầu tiên.</value>
+  </data>
+  <data name="Common.Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Common.DownloadSampleTemplate" xml:space="preserve">
+    <value>Tải file mẫu</value>
+  </data>
+  <data name="Common.FailedToDownloadFile" xml:space="preserve">
+    <value>Đã có lỗi khi tải file. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Product.UploadedItems" xml:space="preserve">
+    <value>Sản phẩm đã upload</value>
+  </data>
+  <data name="Common.SheetNotFound" xml:space="preserve">
+    <value>Không tìm thấy sheet đã nhập!</value>
+  </data>
+  <data name="Product.Upload.Success" xml:space="preserve">
+    <value>Danh sách sản phẩm đã được upload thành công!</value>
+  </data>
+  <data name="Award.Upload.Success" xml:space="preserve">
+    <value>Danh sách người thắng giải đã được upload thành công!</value>
+  </data>
+  <data name="Award.Name" xml:space="preserve">
+    <value>Tên giải thưởng</value>
+  </data>
+  <data name="Award.NotFound" xml:space="preserve">
+    <value>Không tìm thấy giải thưởng đã chọn!</value>
+  </data>
+  <data name="Award.PV" xml:space="preserve">
+    <value>Điểm PV</value>
+  </data>
+  <data name="Award.Create" xml:space="preserve">
+    <value>Tạo giải thưởng</value>
+  </data>
+  <data name="Award.Edit" xml:space="preserve">
+    <value>Cập nhật giải thưởng</value>
+  </data>
+  <data name="Award.ConfirmDelete" xml:space="preserve">
+    <value>Bạn có chắc muốn xóa Giải thưởng này không?</value>
+  </data>
+  <data name="Award.FailedToCreate" xml:space="preserve">
+    <value>Đã có lỗi khi tạo giải thưởng. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Award.FailedToUpdate" xml:space="preserve">
+    <value>Đã có lỗi khi cập nhật giải thưởng. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Award.FailedToDelete" xml:space="preserve">
+    <value>Đã có lỗi khi xóa giải thưởng. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Award.SuccessToDelete" xml:space="preserve">
+    <value>Xóa giải thưởng thành công</value>
+  </data>
+  <data name="Award.SuccessToSave" xml:space="preserve">
+    <value>Lưu giải thưởng thành công</value>
+  </data>
+  <data name="Enums.UserRole.Employee" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="Enums.UserRole.Warehouse" xml:space="preserve">
+    <value>Warehouse</value>
+  </data>
+  <data name="Enums.UserRole.HRAdmin" xml:space="preserve">
+    <value>HR Admin</value>
+  </data>
+  <data name="Enums.UserRole.HRManager" xml:space="preserve">
+    <value>HR Manager</value>
+  </data>
+  <data name="Enums.UserRole.IT" xml:space="preserve">
+    <value>IT</value>
+  </data>
+  <data name="Order.Validation.NotEligibleUser" xml:space="preserve">
+    <value>Ngày nghỉ trước ngày kết thúc đặt hàng, người dùng không hợp lệ</value>
+  </data>
+  <data name="Order.TotalPriceWithDiscount" xml:space="preserve">
+    <value>Tổng tiền (-21%)</value>
+  </data>
+  <data name="BatchJob.RunInfoInvalid" xml:space="preserve">
+    <value>Thông tin user/key không chính xác!</value>
+  </data>
+  <data name="Product.SelectedName.Caption" xml:space="preserve">
+    <value>Bạn đã chọn</value>
+  </data>
+  <data name="Product.Category" xml:space="preserve">
+    <value>Loại sản phẩm</value>
+  </data>
+  <data name="Product.Sku" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Product.IsActive" xml:space="preserve">
+    <value>Kích hoạt</value>
+  </data>
+  <data name="Product.ConfirmDelete" xml:space="preserve">
+    <value>Bạn có chắc muốn xóa sản phẩm này không?</value>
+  </data>
+  <data name="Product.SuccessToDelete" xml:space="preserve">
+    <value>Xóa sản phẩm thành công</value>
+  </data>
+  <data name="Product.SuccessToUpdate" xml:space="preserve">
+    <value>Cập nhật sản phẩm thành công</value>
+  </data>
+  <data name="Product.ActiveOnly" xml:space="preserve">
+    <value>Chỉ tìm sản phẩm active</value>
+  </data>
+  <data name="Product.Validation.SkuExisted" xml:space="preserve">
+    <value>Sku đã tồn tại. Vui lòng nhập giá trị khác!</value>
+  </data>
+  <data name="Exception" xml:space="preserve">
+    <value>Có lỗi khi xử lý, liên hệ Admin</value>
+  </data>
+  <data name="Common.Back" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="Order.Total" xml:space="preserve">
+    <value>Tổng</value>
+  </data>
+  <data name="OrderHistory.NoDate" xml:space="preserve">
+    <value>Không tìm thấy!</value>
+  </data>
+  <data name="OrderWarehouse.PackageAllOrder" xml:space="preserve">
+    <value>Đóng gói tất cả</value>
+  </data>
+  <data name="OrderWarehouse.PrintAllOrder" xml:space="preserve">
+    <value>In tất cả</value>
+  </data>
+  <data name="OrderPackage.PackageAll.Caution" xml:space="preserve">
+    <value>Chú ý: Đóng gói tất cả sẽ không để đánh dấu thiếu hàng và thêm ghi chú</value>
+  </data>
+  <data name="User.Department" xml:space="preserve">
+    <value>Bộ phận</value>
+  </data>
+  <data name="User.Location" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="User.Validation.UserNameExisted" xml:space="preserve">
+    <value>UserName đã tồn tại</value>
+  </data>
+  <data name="User.Delete" xml:space="preserve">
+    <value>Xóa user</value>
+  </data>
+  <data name="User.ResetPwd" xml:space="preserve">
+    <value>Reset mật khẩu</value>
+  </data>
+  <data name="User.ResetPwd.Success" xml:space="preserve">
+    <value>Reset mật khẩu thành công</value>
+  </data>
+  <data name="User.Delete.Success" xml:space="preserve">
+    <value>Xóa user thành công</value>
+  </data>
+  <data name="User.Update.Success" xml:space="preserve">
+    <value>Cập nhập user thành công</value>
+  </data>
+  <data name="User.Validation.NotSameNewPassword" xml:space="preserve">
+    <value>Mật khẩu xác nhận không giống</value>
+  </data>
+  <data name="User.Validation.PasswordMin" xml:space="preserve">
+    <value>Mật khẩu tối thiểu {0} ký tự</value>
+  </data>
+  <data name="User.Validation.SameOldPassword" xml:space="preserve">
+    <value>Mật khẩu mới phải khác mật khẩu cũ</value>
+  </data>
+  <data name="User.Validation.WrongOldPassword" xml:space="preserve">
+    <value>Mật khẩu cũ không đúng</value>
+  </data>
+  <data name="Menu.ChangePassword" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="Menu.UserProfile" xml:space="preserve">
+    <value>Thông tin cá nhân</value>
+  </data>
+  <data name="User.ChangePassword" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="User.ChangePassword.Success" xml:space="preserve">
+    <value>Đổi mật khẩu thành công</value>
+  </data>
+  <data name="User.NewPassword" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="User.OldPassword" xml:space="preserve">
+    <value>Mật khẩu cũ</value>
+  </data>
+  <data name="User.VerifyNewPassword" xml:space="preserve">
+    <value>Xác nhận mật khẩu mới</value>
+  </data>
+  <data name="Menu.AdminReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="OrderReport.PrintOrderDetail" xml:space="preserve">
+    <value>In chi tiết đơn hàng</value>
+  </data>
+  <data name="OrderReport.PrintPackagedOrder" xml:space="preserve">
+    <value>In đơn hàng đã đóng gói</value>
+  </data>
+  <data name="OrderReport.SessionDate" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="PageTitle.OrderAdminReport" xml:space="preserve">
+    <value>Admin Report</value>
+  </data>
+  <data name="Select.RequireOption" xml:space="preserve">
+    <value>Chọn lựa</value>
+  </data>
+  <data name="OrderReport.BatchDateRequired" xml:space="preserve">
+    <value>Vui lòng chọn thời điểm muốn in report!</value>
+  </data>
+  <data name="Menu.WarehouseReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="PageTitle.OrderWarehouseReport" xml:space="preserve">
+    <value>Warehouse Report</value>
+  </data>
+  <data name="Menu.MaintainPolicy" xml:space="preserve">
+    <value>Cấu hình Policy</value>
+  </data>
+  <data name="Policy.FailedToUpdate" xml:space="preserve">
+    <value>Đã có lỗi khi cập nhật policy. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="Policy.SuccessToUpdate" xml:space="preserve">
+    <value>Cập nhật policy thành công!</value>
+  </data>
+  <data name="Policy.Validation.PositiveNumberRequired" xml:space="preserve">
+    <value>Giá trị phải là số dương!</value>
+  </data>
+  <data name="Policy.Validation.MaxLengthExceed" xml:space="preserve">
+    <value>Giá trị lớn hơn cho phép ({0} chữ số)!</value>
+  </data>
+  <data name="Policy.Validation.StartOrEndDayInvalid" xml:space="preserve">
+    <value>Ngày đóng/mở chương trình không hợp lệ.</value>
+  </data>
+  <data name="Policy.ConfirmUpdate" xml:space="preserve">
+    <value>Bạn có chắc muốn cập nhật policy không?</value>
+  </data>
+  <data name="Policy.Info" xml:space="preserve">
+    <value>Thông tin Policy</value>
+  </data>
+  <data name="Policy.DownloadFile" xml:space="preserve">
+    <value>Tải file Policy</value>
+  </data>
+  <data name="Policy.Upload.Success" xml:space="preserve">
+    <value>File policy đã được upload thành công!</value>
+  </data>
+  <data name="Menu.ViewPvLog" xml:space="preserve">
+    <value>Xem PV thay đổi</value>
+  </data>
+  <data name="PageTitle.ViewPvLog" xml:space="preserve">
+    <value>Xem PV thay đổi</value>
+  </data>
+  <data name="PVLog.LogDate" xml:space="preserve">
+    <value>Ngày thay đổi</value>
+  </data>
+  <data name="PVLog.Change" xml:space="preserve">
+    <value>Thay đổi</value>
+  </data>
+  <data name="PVLog.Description" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="PVLog.Month" xml:space="preserve">
+    <value>Tháng</value>
+  </data>
+  <data name="PVLog.PreviousSessionPV" xml:space="preserve">
+    <value>Số PV kỳ trước mang sang</value>
+  </data>
+  <data name="PVLog.MonthlyRewardedPV" xml:space="preserve">
+    <value>Số PV được hưởng trong kỳ</value>
+  </data>
+  <data name="PVLog.AwardedPV" xml:space="preserve">
+    <value>Số PV được tặng theo giải thưởng trong kỳ</value>
+  </data>
+  <data name="PVLog.BirthdayRewardedPV" xml:space="preserve">
+    <value>Số PV được tặng sinh nhật</value>
+  </data>
+  <data name="PVLog.OrderingPV" xml:space="preserve">
+    <value>Số PV đã sử dụng trong kỳ</value>
+  </data>
+  <data name="PVLog.RemainingPV" xml:space="preserve">
+    <value>Số PV còn lại</value>
+  </data>
+  <data name="OrderHistory.NoData" xml:space="preserve">
+    <value>Không thể tìm thấy</value>
+  </data>
+  <data name="Menu.ViewBatchJobLog" xml:space="preserve">
+    <value>Xem BatchJob Log</value>
+  </data>
+  <data name="PageTitle.ViewBatchJobLog" xml:space="preserve">
+    <value>Xem BatchJob Log</value>
+  </data>
+  <data name="BatchJob.Message" xml:space="preserve">
+    <value>Nội dung</value>
+  </data>
+  <data name="BatchJob.Time" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="BatchJob.DetailPage" xml:space="preserve">
+    <value>Chi tiết log</value>
+  </data>
+  <data name="OrderReport.PrintSuccess" xml:space="preserve">
+    <value>In report thành công!</value>
+  </data>
+  <data name="OrderReport.FailedToReport" xml:space="preserve">
+    <value>Đã có lỗi khi xuất ra Excel. Vui lòng liên hệ Admin!</value>
+  </data>
+  <data name="OrderReport.NoDataToReport" xml:space="preserve">
+    <value>Không có dữ liệu để xuất ra Excel</value>
+  </data>
+  <data name="Modal.Alert" xml:space="preserve">
+    <value>Lưu ý</value>
+  </data>
+  <data name="Order.NotSelectOrderDetailToRemove" xml:space="preserve">
+    <value>Vui lòng chọn mục cần xóa</value>
+  </data>
+  <data name="Order.ValueDescription" xml:space="preserve">
+    <value>Giá trị (PV hoặc VND)</value>
+  </data>
+  <data name="OrderType.Cash" xml:space="preserve">
+    <value>Mua sản phẩm giảm giá</value>
+  </data>
+  <data name="OrderType.PV" xml:space="preserve">
+    <value>Đổi điểm PV lấy sản phẩm</value>
+  </data>
+  <data name="User.UserName" xml:space="preserve">
+    <value>Mã nhân viên</value>
+  </data>
+  <data name="Menu.AdminReport.InternalRequisitionForm" xml:space="preserve">
+    <value>Internal Requisition Form</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryDiscountProduct" xml:space="preserve">
+    <value>Symmary Discount Product</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryOrderByIndividualDiscount" xml:space="preserve">
+    <value>Summary Order By Individual - Discount</value>
+  </data>
+  <data name="Menu.AdminReport.SummaryOrderByIndividualPV" xml:space="preserve">
+    <value>Summary Order By Individual</value>
+  </data>
+  <data name="PageTitle.AdminReport.InternalRequisitionForm" xml:space="preserve">
+    <value>Internal Requisition Form</value>
+  </data>
+  <data name="Report.ExportExcel" xml:space="preserve">
+    <value>Xuất ra file Excel</value>
+  </data>
+  <data name="UISelect.All" xml:space="preserve">
+    <value>Tất cả</value>
+  </data>
+  <data name="UISelect.InputFilterDepartment" xml:space="preserve">
+    <value>Nhập tên bộ phận bạn muốn chọn</value>
+  </data>
+  <data name="UISelect.InputFilterLocation" xml:space="preserve">
+    <value>Nhập tên địa điểm bạn muốn chọn</value>
+  </data>
+  <data name="UISelect.Warning.BatchDateNotSelected" xml:space="preserve">
+    <value>Xin vui lòng chọn thời gian đợt đặt hàng</value>
+  </data>
+  <data name="Report.ExportFailed" xml:space="preserve">
+    <value>Xuất báo cáo thất bại</value>
+  </data>
+  <data name="Report.ExportSuccessful" xml:space="preserve">
+    <value>Xuất báo cáo thành công</value>
+  </data>
+  <data name="Report.Preview" xml:space="preserve">
+    <value>Xem trước báo cáo</value>
+  </data>
+  <data name="Report.Summary.TotalAmount" xml:space="preserve">
+    <value>Tổng số lượng</value>
+  </data>
+  <data name="Report.Summary.TotalPrice" xml:space="preserve">
+    <value>Tổng tiền</value>
+  </data>
+  <data name="Report.Summary.TotalPV" xml:space="preserve">
+    <value>Tổng PV</value>
+  </data>
+  <data name="UISelect.InputFilterProduct" xml:space="preserve">
+    <value>Nhập SKU/SKU Name bạn muốn chọn</value>
+  </data>
+  <data name="UISelect.InputFilterUserFullName" xml:space="preserve">
+    <value>Nhập tên nhân viên bạn muốn chọn</value>
+  </data>
+  <data name="UISelect.InputFilterUserName" xml:space="preserve">
+    <value>Nhập mã nhân viên bạn muốn chọn</value>
+  </data>
+  <data name="PageTitle.AdminReport.OrderByIndividualDiscount" xml:space="preserve">
+    <value>Summary Purchasing Order By Individual - Discounted Product</value>
+  </data>
+  <data name="PageTitle.AdminReport.OrderByIndividualPV" xml:space="preserve">
+    <value>Summary Order By Individual - PV Entitlement</value>
+  </data>
+  <data name="PageTitle.AdminReport.SummaryDiscountProduct" xml:space="preserve">
+    <value>Summary of Purchasing Discount Product</value>
+  </data>
+  <data name="Report.Summary.TotalDiscountedPrice" xml:space="preserve">
+    <value>Tổng tiền sau khi giảm</value>
+  </data>
+  <data name="Report.Exception.NoRecord" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu để xuất báo cáo</value>
+  </data>
+  <data name="Report.Preview.NoResult" xml:space="preserve">
+    <value>Không tìm thấy dữ liệu</value>
+  </data>
+  <data name="OrderPackage.DiscountOrderNotFound" xml:space="preserve">
+    <value>Không tìm thấy đơn hàng giảm giá do không tồn tại hay đã được đóng gói!</value>
+  </data>
+  <data name="Report.Warehouse.Unauthorized" xml:space="preserve">
+    <value>Bạn không có quyền sử dụng chức năng báo cáo dành cho Warehouse</value>
+  </data>
+  <data name="Order.Type" xml:space="preserve">
+    <value>Loại đơn hàng</value>
+  </data>
+  <data name="Report.StartDownloading" xml:space="preserve">
+    <value>Bắt đầu tải xuống báo cáo</value>
+  </data>
+  <data name="Error.NotAuthorized" xml:space="preserve">
+    <value>Không có quyền sử dụng chức năng này</value>
+  </data>
+  <data name="OrderPackage.DiscountOrder.Packaged" xml:space="preserve">
+    <value>Đơn hàng giảm giá đã được đóng gói</value>
+  </data>
+  <data name="OrderPackage.PVOrder.Packaged" xml:space="preserve">
+    <value>Đơn hàng thanh toán bằng điểm PV đã được đóng gói</value>
+  </data>
+  <data name="UISelect.InputFilterVolume" xml:space="preserve">
+    <value>Chọn số lượng bạn muốn đặt</value>
+  </data>
+  <data name="Common.Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="Common.Language.Vietnamese" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="Common.Language.English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="User.CannotDeleteOnlyIT" xml:space="preserve">
+    <value>Không thể xóa người dùng với role IT duy nhất trong hệ thống</value>
+  </data>
+  <data name="User.ConfirmResetPwd" xml:space="preserve">
+    <value>Bạn có chắc muốn reset mật khẩu cho user này? Mật khẩu sẽ giống tên tài khoản sau khi được reset</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Đã được duyệt</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Bản nháp</value>
+  </data>
+  <data name="Packaged" xml:space="preserve">
+    <value>Đã đóng gói</value>
+  </data>
+  <data name="Submitted" xml:space="preserve">
+    <value>Đã gửi yêu cầu</value>
+  </data>
+  <data name="OrderWarehouse.Department.NoApprovedOrder" xml:space="preserve">
+    <value>Không tìm thấy bộ phận với đơn hàng đã duyệt</value>
+  </data>
+  <data name="ProgressBar.Loading" xml:space="preserve">
+    <value>Đang tải dữ liệu </value>
+  </data>
+  <data name="OrderWarehouse.Caution.AfterPackaging" xml:space="preserve">
+    <value>Lưu ý: Sau khi đã đóng gói đơn hàng mà bạn quên chưa lưu báo cáo, xin vui lòng tải lại trang để thấy nút In báo cáo hoạt động trở lại.</value>
+  </data>
+  <data name="OrderWarehouse.PrintOrderPreview" xml:space="preserve">
+    <value>In đơn hàng xem trước</value>
+  </data>
+  <data name="Order.Validation.OrderInSessionExist" xml:space="preserve">
+    <value>Tìm thấy đơn hàng của bạn trong đợt hàng này, không thể thêm mới</value>
+  </data>
+</root>

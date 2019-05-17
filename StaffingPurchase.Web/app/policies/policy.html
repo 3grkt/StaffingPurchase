@@ -1,0 +1,37 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form" name="configurationForm">
+		<div class="row" ng-repeat="config in vm.allConfigs">
+			<div class="form-group col-md-12">
+				<label class="col-md-4">{{ config.Description }}</label>
+				<div class="col-md-4">
+					<input type="text" class="form-control" ng-model="config.Value" required />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-4">{{ vm.policyDocument.Description }}</label>
+				<div class="col-md-4">
+					<div style="margin-bottom: 5px;">
+						<a href="javascript:;" ng-click="vm.downloadPolicyFile()">{{ vm.policyDocument.Value }}</a>
+					</div>
+					<input type="file" ngf-select ng-model="vm.uploadedFile" name="file"
+						   accept="*" ngf-max-size="4MB"
+						   ngf-model-invalid="errorFile" />
+					<button class="btn btn-default" style="margin-top: 5px;" ng-click="vm.uploadFile(vm.uploadedFile)" ng-disabled="!vm.uploadedFile">{{ "Common.Upload" | translate }}</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<button type="button" value="search" class="btn btn-primary" ng-click="vm.reset()">
+					<i class="fa fa-times"></i> {{ "Common.Reset" | translate }}
+				</button>
+				<button type="submit" value="search" class="btn btn-primary" ng-click="vm.save()" ng-disabled="!configurationForm.$valid">
+					<i class="fa fa-floppy-o"></i> {{ "Common.Save" | translate }}
+				</button>
+			</div>
+		</div>
+	</form>
+</fieldset>

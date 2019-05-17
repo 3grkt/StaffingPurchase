@@ -1,0 +1,19 @@
+{
+  "name": "staffing-purchase",
+  "version": "1.0.0",
+  "description": "staffing purchase app",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.7"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

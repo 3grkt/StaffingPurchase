@@ -1,0 +1,50 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form" name="uploadForm">
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-3" translate>Award.Name</label>
+				<div class="col-md-4">
+					<select class="form-control" required convert-to-number
+							ng-model="vm.awardId"
+							ng-options="value.id as value.name for (key, value) in vm.allAwards">
+						<option value=""></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-3">
+					{{ "Common.SelectFile" | translate }}
+					(<a href="javascript:;" ng-click="vm.downloadTemplate()">{{ "Common.DownloadSampleTemplate" | translate }}</a>)
+				</label>
+				<div class="col-md-9">
+					<!--<input type="file" file-model="uploadedFile"/>-->
+					<input type="file" ngf-select ng-model="vm.uploadedFile" name="file"
+						   accept="*" ngf-max-size="4MB" required
+						   ngf-model-invalid="errorFile">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<label class="col-md-3">
+					{{"Common.SheetName" | translate}}
+					<i class="fa fa-question-circle tooltip-icon" uib-tooltip="{{'Common.SheetName.Tooltip' | translate}}"
+					   tooltip-placement="right" tooltip-class="tooltip-icon"></i>
+				</label>
+				<div class="col-md-9">
+					<input type="text" class="form-control" ng-model="vm.sheetName" />
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-12">
+				<div class="col-md-offset-3 col-md-9">
+					<button class="btn btn-primary" ng-click="vm.uploadFile(vm.uploadedFile)" ng-disabled="!uploadForm.$valid" translate>Common.Upload</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</fieldset>

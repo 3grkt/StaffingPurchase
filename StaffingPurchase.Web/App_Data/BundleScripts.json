@@ -1,0 +1,177 @@
+[
+    {
+        "virtualPath": "~/static/js/lib",
+        "files": [
+            "~/Scripts/modernizr-*",
+            "~/Scripts/jquery-{version}.js",
+            "~/Scripts/bootstrap.js",
+            "~/Scripts/sb-admin-2.js",
+            "~/bower_components/file-saver/FileSaver.js",
+            "~/Scripts/metisMenu.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/js/angular",
+        "files": [
+            "~/bower_components/angular/angular.js",
+            "~/bower_components/angular-sanitize/angular-sanitize.js",
+            "~/bower_components/angular-resource/angular-resource.js",
+            "~/bower_components/angular-route/angular-route.js",
+            "~/bower_components/angular-translate/angular-translate.js",
+            "~/bower_components/angular-translate-loader-url/angular-translate-loader-url.js",
+            "~/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+            "~/bower_components/angular-ui-grid/ui-grid.js",
+            "~/bower_components/ui-select/dist/select.js",
+            "~/bower_components/ng-file-upload/ng-file-upload.js",
+            "~/bower_components/angular-ui-notification/dist/angular-ui-notification.js",
+            "~/bower_components/angular-cookies/angular-cookies.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app",
+        "files": [
+            "~/app/app.js",
+            "~/app/app.configs.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app-login",
+        "files": [
+            "~/app/app-login.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/shared",
+        "files": [
+            "~/app/shared/services/progress-bar.service.js",
+            "~/app/shared/services/page.service.js",
+            "~/app/shared/services/data.service.js",
+            "~/app/shared/services/common.service.js",
+            "~/app/shared/services/grid.service.js",
+            "~/app/shared/services/alert.service.js",
+            "~/app/shared/services/file-upload.service.js",
+            "~/app/shared/directives/menu.directive.js",
+            "~/app/shared/directives/convert-to-number.directive.js",
+            "~/app/shared/directives/file-model.directive.js",
+            "~/app/shared/controllers/page.controller.js",
+            "~/app/shared/controllers/confirm-modal.controller.js",
+            "~/app/shared/controllers/alert-modal.controller.js",
+            "~/app/shared/filters/_module.js",
+            "~/app/shared/filters/custom-filters.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/home",
+        "files": [
+            "~/app/home/home.controller.js",
+            "~/app/home/home.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/orders",
+        "files": [
+            "~/app/orders/order.controller.js",
+            "~/app/orders/order.service.js",
+            "~/app/orders/order-update.controller.js",
+            "~/app/orders/order-update-edit.controller.js",
+            "~/app/orders/order-update.service.js",
+            "~/app/orders/order-history.controller.js",
+            "~/app/orders/order-history.service.js",
+            "~/app/orders/order-approval.controller.js",
+            "~/app/orders/order-approval-grid.directive.js",
+            "~/app/orders/order-warehouse.controller.js",
+            "~/app/orders/order-package.controller.js",
+            "~/app/orders/order-warehouse.service.js",
+            "~/app/orders/order-batch.service.js",
+            "~/app/orders/order-view.controller.js",
+            "~/app/orders/order-report.service.js",
+            "~/app/orders/order-admin-report.controller.js",
+            "~/app/orders/order-warehouse-report.controller.js"
+        ]
+    },
+    {
+        "virtualPath":"~/static/app/report",
+        "files":[
+            "~/app/report/internal-requisition-form.controller.js",
+            "~/app/report/report.service.js",
+            "~/app/report/summary-discount-product.controller.js",
+            "~/app/report/order-by-individual-pv.controller.js",
+            "~/app/report/order-by-individual-discount.controller.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/users",
+        "files": [
+            "~/app/users/user.controller.js",
+            "~/app/users/user-creation.controller.js",
+            "~/app/users/user.service.js",
+            "~/app/users/user-change-password.controller.js",
+            "~/app/users/user-profile.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/levelgroups",
+        "files": [
+            "~/app/levelgroups/levelgroup.controller.js",
+            "~/app/levelgroups/levelgroup.service.js",
+            "~/app/levelgroups/level.service.js"
+
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/products",
+        "files": [
+            "~/app/products/product-upload.controller.js",
+            "~/app/products/product-list.controller.js",
+            "~/app/products/product-detail.controller.js",
+            "~/app/products/product.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/accounts",
+        "files": [
+            "~/app/accounts/login.controller.js",
+            "~/app/accounts/account.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/awards",
+        "files": [
+            "~/app/awards/award-list.controller.js",
+            "~/app/awards/award-creation.controller.js",
+            "~/app/awards/award-upload.controller.js",
+            "~/app/awards/award.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/policies",
+        "files": [
+            "~/app/policies/policy.controller.js",
+            "~/app/policies/policy.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/pvlog",
+        "files": [
+            "~/app/pvlog/pvlog.controller.js",
+            "~/app/pvlog/pvlog.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/batchjobs",
+        "files": [
+            "~/app/batchjobs/batchjob-log.controller.js",
+            "~/app/batchjobs/batchjob-log-detail.controller.js",
+            "~/app/batchjobs/batchjob.controller.js",
+            "~/app/batchjobs/batchjob.service.js"
+        ]
+    },
+    {
+        "virtualPath": "~/static/app/special-tasks",
+        "files": [
+            "~/app/special-tasks/special-task.config.js",
+            "~/app/special-tasks/special-task.service.js",
+            "~/app/special-tasks/order-special-task.controller.js"
+        ]
+    }
+]

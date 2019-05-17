@@ -1,0 +1,29 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Staffpurchase - Package Message</title>
+</head>
+<body>
+<div>
+    <p>
+        Hi <b>@Model.ReceiverName</b>,
+        <br />
+        This message has been sent to you automatically by Staffpurchasing System when order(s) were packaged by warehouser <b>@Model.SenderName</b> with comment:
+        <br />
+        * @Model.Content
+        <br />
+        Is package full: @Model.IsPackagedFull
+        <br/>
+        Location Name: @Model.LocationName
+        <br/>
+        Department Name: @Model.DepartmentName
+        <br />
+        Thanks,
+        <br />
+        <i>Staffpurchasing System, Date @DateTime.Now.ToString("F")</i>
+    </p>
+</div>
+</body>
+</html>

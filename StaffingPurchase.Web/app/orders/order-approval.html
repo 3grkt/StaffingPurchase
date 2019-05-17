@@ -1,0 +1,55 @@
+<uib-alert type="{{vm.alert.type}}" ng-show="vm.alert.show">{{vm.alert.msg | translate}}</uib-alert>
+<fieldset class="fieldset">
+	<form class="form-horizontal" role="form">
+		<div class="form-group row">
+			<label class="col-md-2" translate>Common.Location</label>
+			<div class="col-md-3">
+				<select id="location" class="form-control" required convert-to-number
+						ng-model="vm.search.locationId"
+						ng-options="key as value for (key , value) in vm.allLocations">
+					<option value="" translate>Common.All</option>
+				</select>
+			</div>
+			<label class="col-md-2 col-md-offset-2" translate>Common.Department</label>
+			<div class="col-md-3">
+				<select id="department" class="form-control" required convert-to-number
+						ng-model="vm.search.departmentId"
+						ng-options="key as value for (key , value) in vm.allDepartments">
+					<option value="" translate>Common.All</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-md-2" translate>User.EmployeeId</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" ng-model="vm.search.userId"/>
+			</div>
+			<label class="col-md-2 col-md-offset-2" translate>User.EmployeeName</label>
+			<div class="col-md-3">
+				<input type="text" class="form-control" ng-model="vm.search.userName"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<button type="button" class="btn btn-primary" ng-click="vm.searchOrders()">
+					<i class="fa fa-search"></i>
+					{{ "Common.Search" | translate }}
+				</button>
+			</div>
+		</div>
+	</form>
+</fieldset>
+<div ng-if="vm.searched && vm.hasData()">
+	<order-approval-grid grid-data="vm.gridData[OrderType.pv].batch" pagination-options="vm.gridData[OrderType.pv].paginationOptions"
+						 grid-title="OrderBatch.OrderListPV" sum-label="Order.Total.PV.Caption" order-type="OrderType.pv" grid-bind-data="vm.bindData" 
+						 grid-view-order="vm.viewOrder" grid-edit-order="vm.editOrder" grid-approve="vm.approve" grid-reject="vm.reject"
+						 can-approve="vm.canApprove" can-reject="vm.canReject"></order-approval-grid>
+
+	<order-approval-grid grid-data="vm.gridData[OrderType.cash].batch" pagination-options="vm.gridData[OrderType.cash].paginationOptions"
+						 grid-title="OrderBatch.OrderListCast" sum-label="Order.TotalPrice" order-type="OrderType.cash" grid-bind-data="vm.bindData"
+						 grid-view-order="vm.viewOrder" grid-edit-order="vm.editOrder" grid-approve="vm.approve" grid-reject="vm.reject"
+						 can-approve="vm.canApprove" can-reject="vm.canReject"></order-approval-grid>
+</div>
+<fieldset class="fieldset" ng-if="vm.searched && !vm.hasData()">
+	<div translate>OrderBatch.NoData</div>
+</fieldset>

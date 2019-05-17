@@ -1,0 +1,111 @@
+﻿<fieldset class="fieldset">
+    <form class="form-horizontal" role="form">
+        <div class="row form-group form-group-update">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label translate>Location.Name</label>
+                    </div>
+                    <div class="col-md-9">
+                        <span ng-if="!vm.enableFilters">{{vm.metadata.location}}</span>
+                        <ui-select ng-if="vm.enableFilters" ng-model="vm.selectedLocation" ng-change="vm.getOrderUsers()" ng-disabled="!vm.enableFilters">
+                            <ui-select-match placeholder="{{'UISelect.InputFilterLocation' | translate}}">{{$select.selected.Value}}</ui-select-match>
+                            <ui-select-choices repeat="item in vm.locations | filter: $select.search ">
+                                <div ng-bind-html="item.Value | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label translate>User.FullName</label>
+                    </div>
+                    <div class="col-md-9">
+                        <span ng-if="!vm.enableFilters">{{vm.metadata.user}}</span>
+                        <ui-select ng-if="vm.enableFilters" ng-model="vm.selectedUser" ng-change="vm.changes()" ng-disabled="!vm.enableFilters">
+                            <ui-select-match placeholder="{{'UISelect.InputFilterUserFullName' | translate}}">{{$select.selected.FullName}}</ui-select-match>
+                            <ui-select-choices repeat="item in vm.orderUsers | filter: $select.search">
+                                <div ng-bind-html="item.FullName| highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label translate>User.UserName</label>
+                    </div>
+                    <div class="col-md-9">
+                        <span ng-if="!vm.enableFilters">{{vm.metadata.user}}</span>
+                        <ui-select ng-if="vm.enableFilters" ng-model="vm.selectedUser" ng-change="vm.changes()" ng-disabled="!vm.enableFilters">
+                            <ui-select-match placeholder="{{'UISelect.InputFilterUserName' | translate}}">{{$select.selected.UserName}}</ui-select-match>
+                            <ui-select-choices repeat="item in vm.orderUsers | filter: $select.search">
+                                <div ng-bind-html="item.UserName| highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <div class="row">
+                    <label class="col-md-3" translate>Department.Name</label>
+                    <div class="col-md-9">
+                        <span ng-if="!vm.enableFilters">{{vm.metadata.department}}</span>
+                        <ui-select ng-if="vm.enableFilters" ng-model="vm.selectedDepartment" ng-change="vm.getOrderUsers()" ng-disabled="!vm.enableFilters">
+                            <ui-select-match placeholder="{{ 'UISelect.InputFilterDepartment' | translate}}"><span>{{$select.selected.Value}}</span></ui-select-match>
+                            <ui-select-choices allow-clear="true" repeat="item in vm.departments| filter: $select.search">
+                                <div ng-bind-html="item.Value | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <label class="col-md-4" translate>OrderBatch.Range</label>
+                    <div class="col-md-8">
+                        <span ng-if="!vm.enableFilters">{{vm.metadata.orderSession}}</span>
+                        <span ng-if="vm.enableFilters">
+                            {{vm.batchStartDate | customDate}} - {{vm.batchEndDate | customDate}}
+                        </span>
+                    </div>
+                </div>
+                <br />
+                <div class="row" ng-show="vm.enableFilters">
+                    <div class="col-md-12 text-right">
+                        <button type="button" class="btn btn-primary" ng-click="vm.searchOrderDetails()" ng-disabled="!vm.selectedUser.UserId">
+                            <i class="fa fa-search"></i> {{ "OrderDetail.FindOrderDetail" | translate }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</fieldset>
+<fieldset class="fieldset">
+    <div class="row" ng-if="vm.enableFilters">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-primary" ng-click="vm.toPVMode()" ng-disabled="!vm.hasPVOrder || vm.selectedType == 1">
+                {{ "Order.PVMode" | translate }} <i class="fa fa-check" aria-hidden="true" ng-if="vm.selectedType == 1 && vm.hasPVOrder"></i>
+            </button>
+            <button type="button" class="btn btn-primary" ng-click="vm.toPriceMode()" ng-disabled="!vm.hasPriceOrder || vm.selectedType == 0">
+                {{ "Order.PriceMode" | translate }} <i class="fa fa-check" aria-hidden="true" ng-if="vm.selectedType == 0 && vm.hasPriceOrder"></i>
+            </button>
+        </div>
+    </div>
+    <br />
+    <div ui-grid="vm.gridOptionsOrderDetail" class="grid" ui-grid-auto-resize ng-style="getGridHeight(vm.gridOptionsOrderDetail, true)"></div>
+    <div class="row">
+        <div class="col-md-12 text-right">
+            <button type="button" class="btn btn-primary" ng-show="!vm.enableFilters" ng-click="vm.close()">
+                <i class="fa fa-ban"></i> {{ "Common.Close" | translate }}
+            </button>
+            <button type="button" class="btn btn-primary" ng-show="vm.isEditable && vm.enableFilters" ng-click="vm.cancelChanges()" ng-disabled="vm.isLookedOrder || vm.isSubmitted">
+                <i class="fa fa-ban"></i> {{ "OrderUpdate.Cancel" | translate }}
+            </button>
+            <button type="button" class="btn btn-primary" ng-show="vm.isEditable" ng-click="vm.saveChanges()" ng-disabled="vm.isLookedOrder || vm.isSubmitted">
+                <i class="fa fa-floppy-o"></i> {{ "OrderUpdate.Submit" | translate }}
+            </button>
+        </div>
+    </div>
+    &nbsp;
+</fieldset>
